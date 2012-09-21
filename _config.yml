@@ -1,0 +1,6 @@
+markdown: rdiscount
+permalink: /:year/:month/:title/
+url: http://lazybios.github.com/cn
+author: lazybios
+pygments: true
+
