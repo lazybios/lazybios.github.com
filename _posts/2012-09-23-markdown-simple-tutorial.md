@@ -31,15 +31,17 @@ Markdown是一种源码与发布同样**易读易写**的一种轻量级的文�
 >`[沸点](http://lazybios.github.com "Freshstu")`
 
 参考:
->`[沸点][1]工作室 
+>`[沸点][1]工作室
+
 >[1]:http://lazybios.github.com "Freshstu"`
 
 ####图片
 >行内
-`![alt text](http://www.baidu.com/img/baidu_sylogo1.gif)`
+>>`![alt text](http://www.baidu.com/img/baidu_sylogo1.gif)`
 >参考
-`![alt text][1]
-[1]:http://www.baidu.com/img/baidu_sylogo1.gif "百度logo"`
+>>`![alt text][1]
+
+>>[1]:http://www.baidu.com/img/baidu_sylogo1.gif "百度logo"`
 >结果
 ![alt text](http://www.baidu.com/img/baidu_sylogo1.gif "百度logo")
 
