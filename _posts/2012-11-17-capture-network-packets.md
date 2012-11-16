@@ -55,6 +55,10 @@ tags:
 >+ 遇到的问题
 
 由于代码高亮插件没整明白，先写在这里，回头补上
-`public void main(){
 
-}`
+
+	public void main(){
+		system.out.println("输出");
+	}
+
+just a test!
