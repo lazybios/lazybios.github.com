@@ -30,7 +30,7 @@ tags:
 
 >>1. 首先到官网下载winpcap，一路next安装       
 
->>2. 配置IDE环境，即添加第三方链接库和设置文件头文件搜索路径，project上右键选择build options设置，linker settings->add,添加开发包下lib目录中的Packet.lib,wpcap.lib 以及Mirosoft SDK下的Ws2_32.lib;Search directories->add 添加头文件搜索路径为winpcap开发包中的incude文件夹
+>>2. 配置IDE环境，即添加第三方链接库和设置文件头文件搜索路径，project上右键选择build_options设置，linker_settings->add,添加开发包下lib目录中的Packet.lib,wpcap.lib 以及Mirosoft SDK下的Ws2_32.lib;Search directories->add 添加头文件搜索路径为winpcap开发包中的incude文件夹
 
 
 
@@ -55,3 +55,6 @@ tags:
 >+ 遇到的问题
 
 由于代码高亮插件没整明白，先写在这里，回头补上
+`public void main(){
+
+}`
