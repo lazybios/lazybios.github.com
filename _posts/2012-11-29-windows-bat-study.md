@@ -15,46 +15,28 @@ tags:
 下面直接贴代码：
 
 
+{
 @echo off
-
 echo initialize... 
-
 echo start convert...
-
 setlocal enabledelayedexpansion
-
 set count=0
-
 for /r %%i in (*.ppt) do set /a count+=1
-
 set uncomplete=%count%
-
 set complete=0
-
 for /r %%i in (*.ppt) do (		 	 
-
 	 echo conveting: %%~ni;
-
 	 flashprinter.exe "%%i" -o "%%~di%%~pi%%~ni.swf"		 	 
-
 	 set /a uncomplete-=1
-
 	 set /a complete+=1
-
 	 echo work state
-
 	 echo ----------	 
-
 	 echo %%~ni%%~xi conveted success
-
 	 echo total:%count%  complete:!complete! uncomplete:!uncomplete!
-
 	 echo.
-
 )
-
 pause
-
+}
 
 ####代码运行环境
 
