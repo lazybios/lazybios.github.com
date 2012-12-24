@@ -2,10 +2,10 @@
 layout: post
 title: sina微博相册小爬虫
 categories:
--python
+- python
 tags:
--爬虫
--python
+- 爬虫
+- python
 ---
 
 很早以前就想写个爬虫程序体验下，总是停留到想的层面里，没有落实(执行力差)，这次写了一个爬去sina微博相册的小爬虫，算是开了个头吧，当然小爬虫嘛，线程之类统统没有，下一步再向多线程爬虫进军吧。

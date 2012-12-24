@@ -2,11 +2,11 @@
 layout: post
 title: linux shell 学习记录(一)
 categories:
--linux 
--linux shell
+- linux 
+- linux shell
 tags:
--linux
--linux shell
+- linux
+- linux shell
 ---
 
 Linux shell脚本，新近完成一个基本的练习，总结记录一下！
