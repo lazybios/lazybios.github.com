@@ -1,9 +1,9 @@
 ---
-title: links
+title: Links
 layout: page
 comments: yes
 ---
 
-欢迎大家交换链接，有需要的留言申请！
+欢迎交换链接，有需要的留言申请！
 
 
