@@ -28,10 +28,10 @@ tags:
 
 >`$ git config --global credential.helper 'cache --timeout=3600'`
 
-以上就是github环境的配置，如果你想配置ssh免密码输入，可以github的官方指南[梯子在此]('https://help.github.com/articles/ssh-key-setup')
+以上就是github环境的配置，如果你想配置ssh免密码输入，可以github的官方指南[梯子在此](https://help.github.com/articles/ssh-key-setup)
 
 ###Jekyll安装配置
-我用的是fedora 14，这个版本里有些内置的依赖没有安装，所以网上和[jekyll官方]('https://github.com/mojombo/jekyll/wiki/install')给的信息在安装的过程中会有些变化，正确的安装顺序应该是：
+我用的是fedora 14，这个版本里有些内置的依赖没有安装，所以网上和[jekyll官方](https://github.com/mojombo/jekyll/wiki/install)给的信息在安装的过程中会有些变化，正确的安装顺序应该是：
 #####1. 安装ruby环境能
 > `$ sudo yum install ruby-devel`
 
