@@ -2,8 +2,7 @@
 layout: post
 title: linux shell 学习记录(一)
 categories:
-- linux 
-- linux shell
+- Linux 
 tags:
 - linux
 - linux shell
