@@ -1,6 +1,6 @@
 ---
 layout: post
-title: php小偷程序
+title: PHP小偷程序
 categories:
 - php 
 - codeigniter
