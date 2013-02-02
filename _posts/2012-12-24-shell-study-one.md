@@ -1,6 +1,6 @@
 ---
 layout: post
-title: linux shell 学习记录(一)
+title: Linux shell 学习记录(一)
 categories:
 - Linux 
 tags:

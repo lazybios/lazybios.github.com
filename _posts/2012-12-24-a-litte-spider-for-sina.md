@@ -1,6 +1,6 @@
 ---
 layout: post
-title: sina微博相册小爬虫
+title: Sina微博相册小爬虫
 categories:
 - python
 tags:
