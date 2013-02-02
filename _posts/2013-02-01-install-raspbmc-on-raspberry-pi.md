@@ -1,6 +1,6 @@
 ---
 layout: post
-title: raspberry_pi折腾记之raspbmc初体验
+title: Raspberry_pi折腾记之raspbmc初体验
 categories:
 - Raspberry_pi
 tags:
