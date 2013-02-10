@@ -2,10 +2,10 @@
 layout: post
 title: Ubuntu 12.04下安装gnome桌面
 categories:
--Linux
+- Linux
 tags:
--Linux
--Ubuntu
+- Linux
+- Ubuntu
 ---
 
 今天Ubuntu下的Dash主页突然搜不到应用了，只能显示文本文件等源文件，网上找了下也没找到好的解释，好多人说法是重装就好了，好崩溃呀--!不过还好我重启了一下问题就解决了，倒是突然然我对gnome桌面产生了兴趣，于是做了下尝试
