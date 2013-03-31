@@ -2,11 +2,11 @@
 layout: post
 title: eclipse下mi2真机调试
 categories:
--android开发
+- android开发
 tags:
--android
--eclipse
--mi2
+- android
+- eclipse
+- mi2
 ---
 
 Eclipse中使用小米2做真机调试的时候开始找不到米2选项，晚上搜了半天发现大家都有这个问题，绝大多数给出的方案是：
