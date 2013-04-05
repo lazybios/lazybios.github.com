@@ -1,6 +1,6 @@
 ---
 layout: post
-title: mysql命令行下导入到处.sql文件
+title: mysql命令行下导入到出.sql文件
 categories:
 - Mysql
 tags:
