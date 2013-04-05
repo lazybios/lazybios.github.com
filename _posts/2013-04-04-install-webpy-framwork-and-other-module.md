@@ -5,8 +5,8 @@ categories:
 - webpy
 tags:
 - webpy
--mysql-python
--mako
+- mysql-python
+- mako
 ---
 
 #####Webpy安装
