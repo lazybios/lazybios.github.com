@@ -20,6 +20,8 @@ Python的import有俩中不同的语法表示，分别
 
 <script src="https://gist.github.com/lazybios/5354339.js"></script>
 
+<script src="https://gist.github.com/lazybios/be0257b413ea0d8c7754.js"></script>
+
 #####包import
 包是若干个模块的集合，一个文件夹下创建空的\__init__.py文件，该文件即可被python解释器识别成一个包文件，在webpy项目下的子目录中的\__init__.py就是这个作用，其导入机制与模块相似，不同地方就是在导入模块时执行的是模块内的代码，但导入包时执行的是\__init__.py中的代码，并且包是可以嵌套，即多个较小的包可以聚合成一个较大的包，通过包这种结构，方便了类的管理和维护，也方便了用户的使用
 
