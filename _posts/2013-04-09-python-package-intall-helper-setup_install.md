@@ -5,7 +5,7 @@ categories:
 - python
 tags:
 - easy_install
--python
+- python
 ---
 
 easy\_install是由PEAK(Python Enterprise Application Kit)开发的setuptools包里带的一个命令，所以使用easy\_install实际上是在调用setuptools来完成安装模块的工作。它可以很方便的让您自动下载，编译，安装和管理Python包
