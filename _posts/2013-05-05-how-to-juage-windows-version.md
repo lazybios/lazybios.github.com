@@ -1,5 +1,5 @@
 ---
-laytout: post
+layout: post
 title: 编程判断Windows的不同发行版
 categories:
 - python
