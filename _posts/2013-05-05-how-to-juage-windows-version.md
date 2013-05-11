@@ -1,7 +1,7 @@
 ---
 laytou: post
 title: 编程判断Windows的不同发行版
-categries:
+categories:
 - python
 -tags
 - Windows Version
