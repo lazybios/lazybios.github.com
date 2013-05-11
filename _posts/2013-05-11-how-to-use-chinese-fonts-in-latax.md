@@ -1,6 +1,6 @@
 ---
 layout: post
-title: windows下MikTex+TexMaker中文化
+title: Windows下MikTex+TexMaker中文化
 categories:
 - LaTex
 tags:
@@ -24,8 +24,9 @@ tags:
 搞清以上术语仅仅是个开始，下面就要在自己的机器上使用latex了。着重说明下面两个问题 
 > 1. MikTex、TexMaker安装与配置   
 > 2. XelaTex 中文化使用
+
 ####MikTex、TexMaker安装与配置
-下载清单
+下载清单    
 > [MikTex](http://www.miktex.org/downloado)   
 > [TexMaker](http://www.xm1math.net/texmaker/)
 
@@ -34,8 +35,8 @@ tags:
 ####XelaTex 中文化
 这时你的TexMaker可以正确书写和编译.tex文件，但仅限于英文，如果要写中文会输出空白没有显示，到这里我们急切的需要中文的支持，于是就要用到了XelaTex的支持了，前面说过Xelatex是XeTex的一个命令，而XeTex又是Tex一种实现，而这种实现也被包含到了MikTex中了，此时你只需要对TexMaker进行一些相关设置就能使用XelaTex了
 > 1. 选项=>配置Texmaker=>编辑器=>编辑字体编码 选择UTF-8   
-> 2. 选项=>配置Texmaker=>命令=>LaTex 中 将`latex -interaction=nonstopmode %.tex`换为`xelatex -interaction=nonstopmode %.tex`  
-> 3. 选项=>配置Texmaker=>快速构建=>用户 填写`xelatex %.tex|"C:/Program Files/Adobe/Reader 11.0/Reader/AcroRd32.exe" %.pdf` 这里pdf程序的路径换成你自己的
+> 2. 选项=>配置Texmaker=>命令=>LaTex中将`latex -interaction=nonstopmode %.tex`换为`xelatex -interaction=nonstopmode %.tex`  
+> 3. 选项=>配置Texmaker=>快速构建=>用户处填写`xelatex %.tex|"C:/Program Files/Adobe/Reader 11.0/Reader/AcroRd32.exe" %.pdf` 这里pdf程序的路径换成你自己的
 > 4. 确定
 
 到此配置完毕，通过一个.tex例子来测试下效果。
