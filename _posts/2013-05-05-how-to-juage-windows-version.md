@@ -4,7 +4,8 @@ title: 编程判断Windows的不同发行版
 categories:
 - python
 tags
-- Windows Version
+- Windows
+- Version
 ---
 
 WinXp与Win7属于不同系列，在许多方面有着不同的配置，编程时需要针对相应特定平台作出不同的设置，故对于win版本的判断是很中重要的。
