@@ -22,16 +22,16 @@ tags:
 bash环境中使用Ctrl+z可以让一个运行中的进程转到挂起到后台，进行其它操作，返回时可用`fg`命令
 
 ######0,1,2
-0 stdin
-1 stdout
-2 stderror
+0 stdin     
+1 stdout  
+2 stderror    
 
 ---------------------------------
 #####Vim篇
 ######跳到指定行 [2013-05-16]
-编辑模式 ngg 或nG 跳到指定行
-命令模式 :n
-vim打开文件 `vim +n filename` 打开文件光标到n行
+编辑模式 ngg 或nG 跳到指定行   
+命令模式 :n   
+vim打开文件 `vim +n filename` 打开文件光标到n行   
 
 
 
