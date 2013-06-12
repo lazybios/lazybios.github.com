@@ -40,15 +40,6 @@ int main(void){
 ######共用体特性
 {% highlight c %}
 #include <stdio.h>
-#include <endian.h>
-
-int main(void){
-	printf("Big-endian:%d \nLittle-endian:%d \nmine:%d\n",__BIG_ENDIAN,
-									__LITTLE_ENDIAN,__BYTE_ORDER);
-	return 0;
-}
-echo@echo-VirtualBox:~/learnc$ cat s3.c 
-#include <stdio.h>
 #include <stdlib.h>
 
 union word{
