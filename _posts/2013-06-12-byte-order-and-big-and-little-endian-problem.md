@@ -1,8 +1,9 @@
 ---
-- title: 字节顺序与大小端问题
-- categories:
+layout: post
+title: 字节顺序与大小端问题
+categories:
 - Linux 网络编程
-- tags:
+tags:
 - linux
 - socket
 ---
