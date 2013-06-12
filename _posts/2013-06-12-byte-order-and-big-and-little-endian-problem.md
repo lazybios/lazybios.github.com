@@ -25,6 +25,7 @@ tags:
 当然之所以叫做字节顺序，即是字节之间的顺序，只有大于1字节的数据才会有顺序的差别，1字节内包括1字节的顺序在任何机器上都是一样的，不需要任何形式的转换
 
 既然要转换就要知道自己机器的实际处理器类型模式，一般可以通过宏定义，或利用共用体的存储特性去识别
+######宏定义
 {% highlight c %}
 #include <stdio.h>
 #include <endian.h>
@@ -32,6 +33,41 @@ tags:
 int main(void){
 	printf("Big-endian:%d \nLittle-endian:%d \nmine:%d\n",__BIG_ENDIAN,
 									__LITTLE_ENDIAN,__BYTE_ORDER);
+	return 0;
+}
+{% endhighlight %}
+
+######共用体特性
+{% highlight c %}
+#include <stdio.h>
+#include <endian.h>
+
+int main(void){
+	printf("Big-endian:%d \nLittle-endian:%d \nmine:%d\n",__BIG_ENDIAN,
+									__LITTLE_ENDIAN,__BYTE_ORDER);
+	return 0;
+}
+echo@echo-VirtualBox:~/learnc$ cat s3.c 
+#include <stdio.h>
+#include <stdlib.h>
+
+union word{
+	int a;
+	char b;
+}c;
+
+int checkCPU(void)
+{
+	c.a = 1;
+	return (c.b==1);
+}
+
+int main(void)
+{
+	int i;
+	i = checkCPU();
+	if(i==0) printf("BIG ENDIAN\n");
+	if(i==1) printf("LITTLE ENDIAN\n");
 	return 0;
 }
 {% endhighlight %}
