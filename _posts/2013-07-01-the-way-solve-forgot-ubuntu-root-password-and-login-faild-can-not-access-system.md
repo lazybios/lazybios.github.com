@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 忘记root与登录失败的解决方案
+title: 忘记root密码与登录失败的解决方案
 categories: linux
 tags: 
 - root
