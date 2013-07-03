@@ -1,6 +1,6 @@
 ---
 layout: post
-title: shell变量小记
+title: shell script变量小记
 categories:
 - linux
 tags:
