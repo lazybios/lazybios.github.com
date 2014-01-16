@@ -40,6 +40,8 @@ comments: yes
 > + [一直iphone的全球之旅]()（曾航）[2013/1/14]
 > + [黑客与画家]()（保罗-格雷厄姆）[2013/3/11]
 > + [程序员的数学]()(结城浩)[2013/4/28]
+> + [Introduction to Tornado]()(Michael Dory、Adam Parrish、Brendan Berg)[2013/9/27]
+> + [Rework]()(Jason Fried、David Heinemeier Hansson)[2014/1/7]
 
 ####小说
 --------------------------------

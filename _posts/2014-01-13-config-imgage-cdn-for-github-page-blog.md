@@ -12,7 +12,7 @@ tags:
 
 ####配置步骤
 
-+ 注册七牛(http://www.qiniu.com)账户,七牛新用户都有免费空间和流量配额
++ 注册[七牛](http://www.qiniu.com)账户,七牛新用户都有免费空间和流量配额
 
 + 进行**空间设置** ，设置**镜像源**
 > 这个地方详细说下，这里的镜像源，是指放博客图片的文件夹，例如本站博客图片放在`freshtu.com/assets/img`下，则应将镜像源设置为`http://freshstu.com/assets/img/`即可，但是如果你的博客图片不跟文章存放在一起，那么我推荐直接用七牛空间做图床也可以,将图文放在一起的好处是便于搬家，分离好处是节省空间，毕竟github分配的空间是有限的
@@ -26,4 +26,5 @@ tags:
 ####测试：
 ![测试图片]({{site.IMG_PATH}}/35YOtX2.jpg)
 
+上面的图片是通过cdn加速的，访问[这里](http://freshstu.com/2013/02/install-raspbmc-on-raspberry-pi/),第一张图是放在imgur.com的，比较一下吧，确实速度大有改观^_^
 
