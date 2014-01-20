@@ -1,19 +1,22 @@
 ---
-title: 项目列表
+title: PROJECTS 
 layout: page
 comments: yes
 ---
 
-####bbk开机密码破解器  [2007年12月]
-> 生平写的第一个程序，利用步步高的一个解锁后门实现的，可以破解步步高词典[9188](http://product.yesky.com/product/555/555009/)以下所有词典型号，开发语言是Visual Basic，帮助了许多忘记密码无法开机又不想破费的同学.    
+####bbk开机密码破解器  Visual Basic [2007年12月]
+> 生平写的第一个程序，利用步步高的一个解锁后门实现的，可以破解步步高电子词典[9188](http://product.yesky.com/product/555/555009/)以下所有词典型号，帮助了许多忘记密码无法开机却又不甘被JS宰的同学    
 
-PS: 本来是正常的售后范围，但当地JS愣是10块才给拿到小黑屋解锁一次，而且还牢骚不断...
+PS: 本来是正常的bbk售后范围，但当地JS愣是10块才给拿到小黑屋解锁一次，而且还牢骚不断... o_O
 
-####电子杂志 [2008年6月]
-链接
+####电子杂志 html,photoshop[2009年7月]
+> 一本关于奥黛利赫本的人物杂志，文章内容部分取自网络，部分自己负责。美中不足就是封面，当时审美能力匮乏，现在回头看又是一种不同感觉，可惜丢掉了源文件，不能做修正了,就算作一种纪念吧:(
+
+PS:[杂志下载地址](http://pan.baidu.com/s/1Ab5uQ)
+
 
 ####湖北新生网 php+mysql [2011年5月]
-> 网站主题关于湖北7校新生的，内容来自七校的新生入学指南书籍,宣传材料以及官方网站的信息,纸质内容通过ORC扫描转文字的，官方信息通过采集规则爬回来的,6~10月份报名那段时间访问量还比较大，每日pv基本都能过千，但过了入学季就每愈欲下了,后来停掉了,开发用的php+mysql+apche,但不是直接从头写的二次开发，用的[emcs](http://www.phome.net/)+[Discuz!](http://www.discuz.net/)组合，一个做前台首页，一个bbs，域名就是当前freshstu.com(freshstu==freshstudent)
+> 网站主题关于湖北7校新生的，内容来自武汉七校的新生入学指南书籍,宣传材料以及官方网站的信息,纸质内容通过ORC扫描转文字的，官方信息通过采集规则爬回来的,6~10月份报名那段时间访问量还比较大，每日pv基本都能过千，但过了入学季就每愈欲下了,后来停掉了,开发用的php+mysql+apche,但不是直接从头写的二次开发，用的[emcs](http://www.phome.net/)+[Discuz!](http://www.discuz.net/)组合，一个做前台首页，一个bbs，域名就是当前freshstu.com(freshstu==freshstudent)
 
 
 ####华农掌上指南 java,Android [2012年4月]
@@ -31,15 +34,17 @@ github地址
 
 
 ####linux下玉米基因测序脚本 python [2013年2月]
-> 基于一款叫[Carthagène](http://www7.inra.fr/mia/T/CarthaGene/)的遗传方面的作图分析软件提供的命令行程序，通过进程通信，获取数据分析，使用脚本后效率提升是原来的
+> 基于一款叫[Carthagène](http://www7.inra.fr/mia/T/CarthaGene/)的遗传方面的作图分析软件提供的命令行程序，通过进程通信，导入分析操作数据所有流程全自动化，使用脚本前后工作效率提升了近85%左右
 
 
 ####linux下基于mplayer实现的媒体播放器 c，gtk+ 团队 [2013年6月]
-> 基于mplayer提供的命令行接口实现了媒体播放器常用功能
+> 基于mplayer提供的命令行接口实现了媒体播放器本地播放，网络播放，以及play，seek，stop等常见功能
 
 
 ####超星视频下载破解 python,webpy,mongodb,bae [2013年7月]
-> 实现了在线破解下载[超星学术视频](http://chaoxingbot.duapp.com/)网站的所有门类的视频,支持批量下载，批量修正文件名
+> 实现了在线破解下载[超星学术视频](http://chaoxingbot.duapp.com/)网站的所有门类的视频,支持批量下载，批量修正文件名。
+
+PS:[访问地址](http://chaoxingbot.duapp.com/)
 
 
 
