@@ -1,12 +1,12 @@
 ---
 layout: post
-title: ubuntu上源码安装nginx
-categories: nginx
-tags:
+title: ubuntu平台源码安装nginx
+categories: Linux开发
+tags: 
 - nginx
 - linux
 - ubuntu
-----
+---
 
 通过源码编译安装nginx，简单的说下操作步骤，具体细节不写了，网上教程一大堆,如果不想麻烦，可以直接参考[ubuntu 中文wiki](http://wiki.ubuntu.org.cn/Nginx)里指南，用包管理工具安装
 >  wget http://nginx.org/download/nginx-1.2.9.tar.gz #下载制定版本的源码   
