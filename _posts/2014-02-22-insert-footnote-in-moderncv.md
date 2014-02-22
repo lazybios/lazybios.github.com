@@ -20,4 +20,4 @@ tags:
 >  `footnotetext[num]{note contetnt}` %放入到带显示页码内容的下端，不需要嵌套到`section`内,num与上相应的编号一致   
 
 #####效果图
-![design sketch]({{site.IMG_PATH}}/footnote_latex.jpg)
+![design sketch]({{site.IMG_PATH}}/footnote_latex.png)
