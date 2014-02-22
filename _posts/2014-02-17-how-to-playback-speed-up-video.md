@@ -19,7 +19,14 @@ tags:
 
 使用scaletempo音频过滤器会使播放器根据播放速度自动调节音频声调，使音质尽量接近自然语调     
 
-`-af`参数即aduio filter,具体其它mplayer快捷参数，详细请参考mplayer mannual
+`-af`参数即aduio filter,具体其它mplayer快捷参数，详细请参考mplayer mannual   
+
+   
+
+  
+
+
+
 
 
 
