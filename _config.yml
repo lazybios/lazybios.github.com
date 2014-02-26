@@ -1,12 +1,8 @@
 markdown: rdiscount
-markdown: redcarpet
 permalink: /:year/:month/:title/
 url: http://lazybios.github.com
 author: lazybios
 pygments: true
 
-
-redcarpet:
-	  extensions: ["no_intra_emphasis", "fenced_code_blocks", "autolink", "tables", "with_toc_data"]
 
 IMG_PATH: http://freshstu.qiniudn.com
