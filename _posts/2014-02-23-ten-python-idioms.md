@@ -6,9 +6,10 @@ categories:
 tags:
 - python idioms
 - python
+published: false
 ---
 
-十种Python惯用法，可以让你写的代码更Pythonic
+十种Python惯用法，可以让你的代码更Pythonic
 
 1. *让脚本同时具有可引用性和可独立执行性*
 
