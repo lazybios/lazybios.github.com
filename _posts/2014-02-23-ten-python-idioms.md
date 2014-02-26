@@ -6,7 +6,6 @@ categories:
 tags:
 - python idioms
 - python
-published: false
 ---
 
 十种Python惯用法，可以让你的代码更Pythonic
