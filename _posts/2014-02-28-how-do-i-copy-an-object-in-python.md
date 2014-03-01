@@ -16,7 +16,7 @@ tags:
 import copy
 newobj = copy.copy(oldobj)
 newobj = copy.deepcopy(oldobj) #递归copy
-{% end highlight %}
+{% endhighlight %}
 
 一些对象有自己到copy方法,比如字典类型有`copy`方法：     
 `newobj = olddict.copy()`
@@ -33,7 +33,7 @@ new_dict = dict(olddict)
 #covert
 new_set = set(L) #list to set
 new_tuple = tuple(L) #list to tuple
-{% end highlight %}
+{% endhighlight %}
 
 [原文链接](http://effbot.org/pyfaq/how-do-i-copy-an-object-in-python.htm)
 
