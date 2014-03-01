@@ -10,7 +10,7 @@ tags:
 ---
 
 
-对于一般案例可以用`copy.copy`或者`copy.deepcopy`，并不是所有对象可以被拷贝。
+对于一般案例可以用`copy.copy`或者`copy.deepcopy`，但并不是所有对象可以被拷贝。
 
 {% highlight python %}
 import copy

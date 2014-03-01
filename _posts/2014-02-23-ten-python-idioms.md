@@ -23,7 +23,7 @@ if __name == '__main__':
 	printf('Executed from the command line')
 	main()
 
-{% end highlight %}
+{% endhighlight %}
 
 可同时在控制台下直接执行，也可以以模块的形式导入后引用   
 `import mymodule`    
@@ -46,7 +46,7 @@ if name and pets and owners:
 if name != '' and len(pets) > 0 and owners != {}:
 	print('We have pets')
 
-{% end highlight %}
+{% endhighlight %}
 
 3. *尽可能的使用`in`*
 > `Contains:`   
@@ -65,7 +65,7 @@ name ='Safe Hammad'
 if name.find('H') != -1:
 	print('This name has an H in it!')
 
-{% end highlight %}
+{% endhighlight %}
 
 
 {% highlight python%}
@@ -82,7 +82,7 @@ while i < len(pets):
 	i += 1
 
 
-{% end highlight %}
+{% endhighlight %}
 
 使用`in`可以清楚，精确的检查一个项目是否在一个序列中    
 可以在list,dicts(keys)，sets,strings使用，还可在实现的__contains__方法的类中使用
@@ -108,7 +108,7 @@ print a,b # 6,5
 
 避免仅使用一次的temp变量使得命名空间变复杂
 
-{% end highlight%}
+{% endhighlight %}
 
 5. *使用sequence建立字串*
 > `''.join(some_strings)`
@@ -126,7 +126,7 @@ for char in chars:
 	name += char
 
 print name #Safe
-{% end highlight%}
+{% endhighlight %}
 join开销是线性时间，`+`开销是平方使用
 
 6. EAFP 胜于 LBYL
@@ -149,7 +149,7 @@ if 'x' in d and  is instance(d['x'],str) and d['x'].isdigit():
 	value = int(d['x'])
 else:
 	value = None
-{% end highlight %}
+{% endhighlight %}
 
 在pyhton中抛出异常没有java中那么开销大   
 Rely on duck typing rather than checking for a specific type
@@ -169,7 +169,7 @@ count = 0
 for name in names:
 	print(i,name) #0 Safe,1 George etc.
 	count += 1
-{% end highlight %}
+{% endhighlight %}
 
 Python2.3+版本都支持enumerate方法    
 Python2.6支持使用参数指定从非0位置开始计数
@@ -191,7 +191,7 @@ for i in data:
 	if i>10:
 		result.append(i * 3)
 print result #[60,45,33]
-{% end highlight %}
+{% endhighlight %}
 
 谨慎使用列表推导式，有些情况会使情况变的更复杂，第二种用法反而更明朗清晰
 
@@ -214,7 +214,7 @@ for i,key in enumerate(keys):
 	d[keys] = values[i]
 print d #{'Bob':'Builder','Safe':'Hammad','Thomas':'Engine'}
 
-{% end highlight %}
+{% endhighlight %}
 
 10. 其它
 
