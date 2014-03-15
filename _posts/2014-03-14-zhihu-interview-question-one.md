@@ -27,8 +27,8 @@ regex_get_url = r'^\[[A-Z]\s+\d{6}\s+(?:\d{1,2}:){2}\d{1,2}\s*]\s+(\d+)\s+\d{3}\
 
 #####程序代码
 {% highlight python linenos %}
-\#!/usr/bin/python
-\# -*- coding: utf-8 -*-
+#!/usr/bin/python
+# -*- coding: utf-8 -*-
 
 import os
 import re
@@ -48,7 +48,7 @@ def main(argv):
 		#sys.exit()
 
 
-\#generate user id list	
+#generate user id list	
 	pattern_1 = re.compile(regex_get_id,re.MULTILINE)
 	user_list = {}
 	final_user_list = []
@@ -86,7 +86,7 @@ def main(argv):
 	#print final_user_list
 	print 'user id list:\t',final_user_list
 
-\#generate access url list
+#generate access url list
 
 	pattern_2 = re.compile(regex_get_url,re.MULTILINE)
 	url_list = {}
@@ -132,7 +132,83 @@ if __name__ == "__main__":
 
 测试用的就是原博主写的测试生成代码，自动生成的模拟数据，不过我发现一个问题，它的那个脚本过于随机，符合结果的数据不多，如果你也打算实现一下，那么建议你在生成文件后自己手动按要求改几个符合条件的数据，看你的程序能不能找出来，否则随机生成你都不知道正确结果有几个，没法判断调试代码
 
+#####测试数据生成代码(直接帖过来的)
+{% highlight python linenos %}
+import random, sys
+
+if len(sys.argv) < 2:
+  print '\nUse like this:\n\t$python create_test_log.py [log_path]\nAnd the 30 * 24 log files for testing will be created in the log_path.\n'
+  sys.exit(0)
+
+usr_list = ['19930418', '19930715', '20130607', '19920212']
+
+for day in range(1, 31):
+  for hour in range(0, 24):
+      log_num = random.randint(1000, 10000)
+      print 'Create %s logs in 2013-1-%s-%s' % (log_num, str(day), str(hour))
+      log_file = open('%s%s-%s-%s-%s.log' % (sys.argv[1], 2013, 1, str(day), str(hour)), 'w')
+      for i in range(log_num):
+          level = random.randint(0, 2)
+          uid = random.randint(0, 9999999)
+          path_base = random.randint(0, 2)
+          path = random.randint(0, 9999999)
+          status = random.randint(0, 2)
+          method = random.randint(0, 2)
+          day_str = '0' + str(day) if day < 10 else str(day)
+          hour_str = '0' + str(hour) if hour < 10 else str(hour)
+          log = '[I 1301%s %s:%s:%s] %s %s %s /%s/%s (%s.%s.%s.%s) %sms\n' % \
+              (day_str, \
+                  hour_str, \
+                  str(random.randint(1, 60)), \
+                  str(random.randint(1, 60)), \
+                  str(uid), \
+                  ['200', '302', '404'][status], \
+                  ['POST', 'GET', 'DELETE'][method], \
+                  ['topic', 'answer', 'question'][path_base], \
+                  str(path), \
+                  str(random.randint(0, 255)), \
+                  str(random.randint(0, 255)), \
+                  str(random.randint(0, 255)), \
+                  str(random.randint(0, 255)), \
+                  str(random.random() * 100))
+          log_file.write(log)
+      for usr in usr_list:
+          log = '[I 1301%s %s:%s:%s] %s %s %s /%s/%s (%s.%s.%s.%s) %sms\n' % \
+              (day_str, \
+                  hour_str, \
+                  str(random.randint(1, 60)), \
+                  str(random.randint(1, 60)), \
+                  usr, \
+                  ['200', '302', '404'][status], \
+                  ['POST', 'GET', 'DELETE'][method], \
+                  'topic', \
+                  '0101010101', \
+                  str(random.randint(0, 255)), \
+                  str(random.randint(0, 255)), \
+                  str(random.randint(0, 255)), \
+                  str(random.randint(0, 255)), \
+                  str(random.random() * 100))
+          log_file.write(log)
+          log = '[I 1301%s %s:%s:%s] %s %s %s /%s/%s (%s.%s.%s.%s) %sms\n' % \
+          (day_str, \
+              hour_str, \
+              str(random.randint(1, 60)), \
+              str(random.randint(1, 60)), \
+              usr, \
+              ['200', '302', '404'][status], \
+              ['POST', 'GET', 'DELETE'][method], \
+              'topic', \
+              '00000000', \
+              str(random.randint(0, 255)), \
+              str(random.randint(0, 255)), \
+              str(random.randint(0, 255)), \
+              str(random.randint(0, 255)), \
+              str(random.random() * 100))
+          log_file.write(log)
+      log_file.close()
+
+{% endhight %}
+
 #####参考引用
 [http://liushuaikobe.github.io/blog/2013/07/24/zhi-hu-bi-shi-%28er-%29-ri-zhi-chu-li/](http://liushuaikobe.github.io/blog/2013/07/24/zhi-hu-bi-shi-%28er-%29-ri-zhi-chu-li/) 
 
-ps:这文章的url还真心长！:)
