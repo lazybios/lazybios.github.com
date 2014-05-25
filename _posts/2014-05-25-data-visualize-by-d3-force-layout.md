@@ -96,7 +96,7 @@ tags:
 
 + 自我指向连接设置，如下图
 
-[!自我指向关系示例]({{site.IMG_PATH}}/selflink.jpg) 
+![自我指向关系示例]({{site.IMG_PATH}}/selflink.jpg) 
 
 **解决办法：** 修改json中links的映射关系，source与target分别引用到nodes中的点，映射函数用的是`d3.map()`,因为中心点的关系在nodes中用两个，所以使用`d3.set()`建立nodes的map结构时会发生覆盖问题，导致后面建立link关系时会出现孤立的点，这时就需要在建立map时，对map中是否已经存在该键做判断，代码如下
 
