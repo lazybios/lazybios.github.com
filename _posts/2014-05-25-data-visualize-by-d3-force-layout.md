@@ -73,7 +73,7 @@ tags:
 
 **解决办法:** 对svg容器添加`d3.behavior.zoom()`行为，并设置zoom事件监听器。最关键的地方是要记得，在svg后追加一个`g`容器，代码如下
 
-{% highlight javascript linenos %s}
+{% highlight javascript linenos %}
               var vis = d3.select("body")
                     .append("svg:svg")
                     .attr("class", "stage")
