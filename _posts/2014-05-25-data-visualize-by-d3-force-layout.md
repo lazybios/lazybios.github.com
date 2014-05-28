@@ -1,7 +1,7 @@
 ---
 layout: post
 title: D3.js数据可视化使用小记
-catgories:
+categories:
 - Javascript
 tags:
 - d3.js
