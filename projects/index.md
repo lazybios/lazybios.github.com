@@ -47,7 +47,7 @@ PS:[Github地址](https://github.com/lazybios/contacts-book)
 ####超星视频下载破解 python,webpy,mongodb,bae [2013年7月]
 > 实现了在线破解下载[超星学术视频](http://chaoxingbot.duapp.com/)网站的所有门类的视频,支持批量下载，批量修正文件名。
 
-PS:[访问地址](http://chaoxingbot.duapp.com/)
+PS:[访问地址](http://chaoxingbot.duapp.com/)[下线]
 
 
 
