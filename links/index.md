@@ -13,6 +13,8 @@ comments: yes
 ####[\#include life](http://www.ziggear.us/)
 > this guy is lazy and dont want to write anything
 
+####[影风LEY](http://www.shwley.com)
+> 如影沉静 & 如风随性
 
 ---------------------
 #####欢迎交换链接，有需要的请留言！
