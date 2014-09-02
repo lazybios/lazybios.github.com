@@ -1,4 +1,12 @@
-Django设置404&500页面
+---
+layout: post
+title: Django设置404&500页面
+categories:
+- Django
+tags:
+- website
+- django
+---
 
 ####404
 
