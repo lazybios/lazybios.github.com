@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Devops马拉松30天——tcpdump Day.1
+title: Devops马拉松30天——tcpdump Day1
 categories:
 - Devops
 tags:
