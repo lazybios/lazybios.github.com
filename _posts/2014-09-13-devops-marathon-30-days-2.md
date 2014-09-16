@@ -17,9 +17,9 @@ SSH（Secure Shell Protocol），可以通过数据包加密技术将等待传�
 ####安装
 {% highlight sh lineos %}
 
-\#debian    
+#debian    
 sudo apt-get install openssh-server openssh-client   
-\#centos    
+#centos    
 sudo yum install openssh-server openssh-client   
 
 {% endhighlight %}
@@ -35,7 +35,7 @@ ssh -f user@ip command
 -o #参数项目(StrictHostKeyChecking=[yes|no|ask] 默认为ask,即要输入`yes`)（ConnectTimeout=秒数：连接等待秒数，减少等待时间）
 -t #交互输入密码   
 ssh user@ip 'touch abc' #直接执行创建abc      
-\#如果不写user的话，会以本地计算机的账号来尝试登陆远程
+#如果不写user的话，会以本地计算机的账号来尝试登陆远程
 
 {% endhighlight %}
 
