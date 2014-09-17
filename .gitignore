@@ -2,5 +2,5 @@
 .*.swo
 _site
 *.notes
-_site
+_site/*
 
