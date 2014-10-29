@@ -1,6 +1,6 @@
 ---
 layout: post
-title: [译文]3步完成响应式设计
+title: 3步完成响应式设计[译文]
 categories:
 - frontend	
 tags:
