@@ -3,6 +3,8 @@ permalink: /:year/:month/:title/
 url: http://lazybios.github.com
 author: lazybios
 highlighter: pygments
-
+name: Freshstu
+url: http://freshstu.com
+author: lazybios
 
 IMG_PATH: http://freshstu.qiniudn.com
