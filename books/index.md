@@ -6,6 +6,8 @@ comments: yes
 
 ##在读
 ---------------------------------
+> + [Agile Web Development with Rails is the Rails]()(Sam Ruby)[2014/11/5]
+> + [RESTful Web APIs]()(Leonard Richardson; Mike Amundsen; Sam Ruby)[2014/11/5]
 > + [沃兹传:与苹果一起疯狂]()(美吉娜·史密斯)[2014/10/5]
 > + [一本书读懂财报]()(肖星)[2014/10/13]
 > + [facebook之父马克.扎克伯格]()((美)林志共//王静)[2014/10/5]
