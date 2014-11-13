@@ -1,6 +1,6 @@
 ---
 layout: post
-title: mac pro双显转换器选择
+title: rMBP接外显转换器的选择
 categories:
 - max pro
 tags:
