@@ -13,7 +13,7 @@ graphite是一块实时监控软件，其由3部分组成，存储数据的wishp
 
 #### 1. 更新软件包索引与系统
 
-{% highlight shell nos %}
+{% highlight sh nos %}
 
 sudo apt-get update
 sudo apt-get upgrade
@@ -44,7 +44,7 @@ sudo apt-get upgrade
 #### 6.修改配置文件（nginx,uwsgi,graphite,）
 ##### Graphite
 `/opt/graphite/`为graphite的默认安装路径,其中`/opt/graphite/conf/`存放的graphite的配置文件
-{% highlight shell nos %}
+{% highlight sh nos %}
 
 ` cp storage-schemas.conf.example storage-schemas.conf`
 `cp storage-aggregation.conf.example storage-aggregation.conf  `
@@ -56,7 +56,7 @@ sudo apt-get upgrade
 打开`local_settings.py`修改时区`TIME_ZONE='Asia/Shanghai'`
 
 ##### Nginx
-{% highlight shell nos %}
+{% highlight sh nos %}
 
 #/etc/nginx/sites-available/graphite
 server {
@@ -78,7 +78,7 @@ server {
 
 ##### uWSGI
 
-{% highlight shell nos %}
+{% highlight sh nos %}
 
 #/etc/uwsgi/apps-available/graphite.ini
 
@@ -110,7 +110,7 @@ module = wsgi:applicationdpuf
 至此所有全部搞定，先开carbon，再开uwsgi，最后nginx
 
 
-{% highlight shell nos %}
+{% highlight sh nos %}
 
 /opt/graphite/bin/carbon-cache.py start
 /etc/init.d/uwsgi restart
@@ -121,7 +121,7 @@ module = wsgi:applicationdpuf
 打开浏览器,输入`http://ip:8080`就能看到效果了，如果不能正确出图,就要排查nginx或者uwsgi的问题了，一般这里出错居多，反正我是如此
 
 排错你可能会需要这几个日志
-{% highlight shell nos %}
+{% highlight sh nos %}
 
 #Nginx日志
 /var/log/nginx/graphite.error.log
