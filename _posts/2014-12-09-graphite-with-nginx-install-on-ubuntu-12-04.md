@@ -46,11 +46,11 @@ sudo apt-get upgrade
 `/opt/graphite/`为graphite的默认安装路径,其中`/opt/graphite/conf/`存放的graphite的配置文件
 {% highlight sh nos %}
 
-` cp storage-schemas.conf.example storage-schemas.conf`
-`cp storage-aggregation.conf.example storage-aggregation.conf  `
-`cp carbon.conf.example carbon.conf`
-`cp graphite.wsgi.example wsgi.py`
-`cp /opt/graphite/webapp/graphite/{local_settings.py.example,local_settings.py}`
+cp storage-schemas.conf.example storage-schemas.conf
+cp storage-aggregation.conf.example storage-aggregation.conf
+cp carbon.conf.example carbon.conf
+cp graphite.wsgi.example wsgi.py
+cp /opt/graphite/webapp/graphite/{local_settings.py.example,local_settings.py}
 {% endhighlight %}
 
 打开`local_settings.py`修改时区`TIME_ZONE='Asia/Shanghai'`
