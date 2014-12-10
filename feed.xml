@@ -15,7 +15,6 @@
 				<link>{{ site.url }}{{ post.url }}</link>
 				<guid isPermaLink="true">{{ site.url }}{{ post.url }}</guid>
 			</item>
-
 		{% endfor %}
 	</channel>
 </rss>
