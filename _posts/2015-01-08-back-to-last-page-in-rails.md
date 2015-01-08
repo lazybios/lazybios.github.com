@@ -1,6 +1,6 @@
 ---
 layout: post
-title: rails实现返回页面
+title: rails实现返回上页
 categories:
 - rails
 tags:
