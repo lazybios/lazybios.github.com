@@ -3,4 +3,7 @@
 _site
 *.notes
 _site/*
+_site/categories/index.html
+_site/index.html
+_site/tags/index.html
 
