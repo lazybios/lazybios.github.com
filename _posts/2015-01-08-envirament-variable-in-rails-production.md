@@ -1,6 +1,6 @@
 ---
 layout: post
-title: rails部署环境中使用环境变量
+title: Rails部署环境的环境变量
 categories:
 - rails
 tags:
