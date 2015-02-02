@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Rails4中数据类型在各数据库中对照表
+title: Active Record数据类型与各DB数据类型对照表
 categories:
 - Rails
 tags:
 - ruby
 ---
 
-在st上看到的，直接上图了，对rails选手应该很有用~ 
+在st上看到的，直接上图了，对rails选手应该很有用~
 
 ![datatype4rails-01]({{site.IMG_PATH}}/datatype4rails1.png)
 
