@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 《The hard way learn ruby》总结(一)
+title: 《The hard way learn ruby》(一)
 categories:
 - Ruby
 tags:
