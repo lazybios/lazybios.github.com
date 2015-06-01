@@ -67,6 +67,8 @@ if __name__ == "__main__":
 ```
 
 在数据库方面，flask并不对你使用何种数据库类型进行限制，可以采用诸如Mysql、Psoteres、SQLite、Redis等任意类型得数据库。而且不用考虑是否有插件支持的问题，即使原生Pyhton模块也能在flask里得到很好地支持。当然，如果有现成得ORM、ODM这样的抽象层在开发上肯定能更加便利。如你所想Flask确实有提供这样的插件——Flask-SQLAlchemy。使用方法如下
+
+
 ```
 from flask.ext.sqlalchemy import SQLAlchemy
 basedir = os.path.abspath(os.path.dirname(__file__))
@@ -82,7 +84,7 @@ Mysql的连接方式`mysql://username:password@hostname/database?charset=utf-8`,
 
 除了做好数据库之间的连接之外，还需建立数据模型，一个模型对应数据库中一张表，同时对应Python中的一个类。数据模型建立以后，就可以像使用Python对象一样去操作数据库中的内容了。
 
-![SQLAlchemy 数据类型]({{site.IMG_PATH/sqlaclchemy-column-type.png}})  
+![SQLAlchemy 数据类型]({{site.IMG_PATH}}/sqlaclchemy-column-type.png)  
 
 在完成DB连接与模型创建之后，就可以像使用Python对象那样去操作数据库了。
 
