@@ -113,7 +113,6 @@ Mysql的连接方式`mysql://username:password@hostname/database?charset=utf-8`,
 + Selenium  Web浏览器自动化工具 (pip install selenium)
 
 
-
 ### 书中推荐的插件列表
 + Flask-Moment 格式化显示时间
 + Flask-Bootstrap twitter-bootstrap 插件
