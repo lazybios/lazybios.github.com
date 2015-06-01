@@ -82,7 +82,7 @@ Mysql的连接方式`mysql://username:password@hostname/database?charset=utf-8`,
 
 除了做好数据库之间的连接之外，还需建立数据模型，一个模型对应数据库中一张表，同时对应Python中的一个类。数据模型建立以后，就可以像使用Python对象一样去操作数据库中的内容了。
 
-![SQLAlchemy 列类型]({{site.IMG_PATH/sqlaclchemy-column-type.png}})
+![SQLAlchemy 数据类型]({{site.IMG_PATH/sqlaclchemy-column-type.png}})  
 
 在完成DB连接与模型创建之后，就可以像使用Python对象那样去操作数据库了。
 
@@ -113,6 +113,9 @@ Mysql的连接方式`mysql://username:password@hostname/database?charset=utf-8`,
 + Selenium  Web浏览器自动化工具 (pip install selenium)
 
 
+
+
+
 ### 书中推荐的插件列表
 + Flask-Moment 格式化显示时间
 + Flask-Bootstrap twitter-bootstrap 插件
@@ -127,6 +130,9 @@ Mysql的连接方式`mysql://username:password@hostname/database?charset=utf-8`,
 + Flask-SQLAlchemy  数据库抽象层ORM
 + Flask-WhooshAlchemy  实现 Flask-SQLAlchemy 模型的全文搜索。
 + Flask-KVsession  服务器端存储用户会话
+
+
+
 
 
 ### 参考引用
