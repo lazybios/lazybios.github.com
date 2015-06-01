@@ -1,5 +1,5 @@
 ---
-layout:
+layout: post
 title: 《Flask Web开发：基于Python的Web应用开发实战》 读书小记
 categories: []
 tags: []

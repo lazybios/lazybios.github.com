@@ -1,5 +1,5 @@
 ---
-layout:
+layout: post
 title: iOS开发从Stroyboard到xib
 categories: []
 tags: []
