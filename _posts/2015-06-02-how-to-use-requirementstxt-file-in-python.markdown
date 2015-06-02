@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Python中»如何自动生成和安装requirements.txt依赖"
+title: "如何自动生成和安装requirements.txt依赖"
 date: "2015-06-02 17:16"
 ---
 
