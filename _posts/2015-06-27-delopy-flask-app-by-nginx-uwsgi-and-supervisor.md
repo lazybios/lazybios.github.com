@@ -43,7 +43,7 @@ deactivate
 在虚拟环境下，执行 `pip install uwsgi`
 
 **使用**
-{% highlight sh linenos %}
+{% highlight sh %}
 /path/to/virtual/env/bin/uwsgi -s /tmp/uwsgi.sock -w flask_file_name:app -H /path/to/virtual/env --chmod-socket 666
 {% endhighlight %}
 
@@ -75,7 +75,7 @@ server {
 
 将nginx配置建立软链到sites-enabled文件夹下  
 
-{% highlight sh linenos %}
+{% highlight sh %}
 ln /path/to/virtual/env/config/nginx.conf /etc/nginx/sites-enabled/app_name.conf
 {% endhighlight %}
 
@@ -105,7 +105,7 @@ stopsignal=QUIT
 {% endhighlight %}
 
 添加完配置以后，通过软链放到supervisor配置文件夹下
-{% highlight sh linenos %}
+{% highlight sh %}
 ln /path/to/virtual/env/config/supervisor.conf /etc/supervisor/conf.d/app_name.conf
 {% endhighlight %}
 
