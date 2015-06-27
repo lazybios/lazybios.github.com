@@ -4,7 +4,6 @@ title: "Flask应用部署小记"
 date: "2015-06-27 13:37"
 ---
 
-来来回回隔断时间就要部署一次，每次都要去查阅一些资料，这次索性做个备忘
 
 ### 部署架构
 + Ubuntu 14.04
@@ -17,9 +16,11 @@ date: "2015-06-27 13:37"
 #### Virtualenv
 
 **安装**
+
 `pip install virtualenv`
 
 **使用**
+
 {% highlight sh linenos %}
 
 # 创建虚拟环境
@@ -31,31 +32,33 @@ deactivate
 {% endhighlight %}
 
 
-创建源码、日志、配置文件夹，分别用来存放flask app源码、部署日志、nginx、supervisor这些组件的配置文件
+创建源码、日志、配置文件夹，分别用来存放flask app源码、部署日志、nginx和supervisor这些组件的配置文件
 
 `cd env_name && mkdir dev log config`
 
 
 #### uWSGI
 **安装**
-\#在虚拟环境下，执行
-`pip install uwsgi`
+在虚拟环境下，执行 `pip install uwsgi`
 
 **使用**
+{% highlight sh linenos %}
 `/path/to/virtual/env/bin/uwsgi -s /tmp/uwsgi.sock -w flask_file_name:app -H /path/to/virtual/env --chmod-socket 666`
+{% endhighlight %}
 
 uwsgi执行后，生成的sock文件，可能会因为权限问题，无法被nginx正确读取访问，通过`--chmod-socket 666`，修正此问题
 
 
 #### Nginx
 **安装**
+
 `sudo apt-get install nginx`
 
 **配置**
-`cd env_name/config`
-`vim nginx.conf`
 
+`vim env_name/config/nginx.conf`
 
+粘贴如下内容:
 {% highlight sh linenos %}
 server {
     listen       80;
@@ -71,20 +74,22 @@ server {
 
 将nginx配置建立软链到sites-enabled文件夹下  
 
-`ln /path/to/virtual/env/config/nginx.conf /etc/nginx/sites-enabled/app_name.conf`
-
+{% highlight sh linenos %}
+ln /path/to/virtual/env/config/nginx.conf /etc/nginx/sites-enabled/app_name.conf
+{% endhighlight %}
 
 上面几个步骤做好以后，其实就能正常访问了，但是如果需要改动的话，还需要频繁的kill进程，重启进程。通过下面得supervisor来管理uwsgi进程的话，可以很好地解决频繁进程重启和守护的问题。
 
 #### Supervisor
 **安装**
+
 `sudo apt-get install supervisor`
 
 
 **使用**
-cd env_name/config
-vim supervisor.conf 添加如下内容
+`vim env_name/config/supervisor.conf`
 
+粘贴如下内容，对应你的项目修改文件
 
 {% highlight sh linenos %}
 [program:your app]
@@ -98,10 +103,10 @@ stopsignal=QUIT
 {% endhighlight %}
 
 添加完配置以后，通过软链放到supervisor配置文件夹下
-`ln /path/to/virtual/env/config/supervisor.conf /etc/supervisor/conf.d/app_name.conf`
+{% highlight sh linenos %}
+ln /path/to/virtual/env/config/supervisor.conf /etc/supervisor/conf.d/app_name.conf
+{% endhighlight %}
 
-启动
-sudo  supervisord
+启动 `sudo  supervisord`
 
-\# 控制
-sudo supervisorctl
+控制 `sudo supervisorctl`
