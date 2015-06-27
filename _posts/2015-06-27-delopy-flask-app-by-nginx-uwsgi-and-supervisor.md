@@ -112,3 +112,7 @@ ln /path/to/virtual/env/config/supervisor.conf /etc/supervisor/conf.d/app_name.c
 启动 `sudo  supervisord`
 
 控制 `sudo supervisorctl`
+
+#### 参考
+[http://ewong.me/creating-and-deploying-flask-app-using-uwsgi-nginx-virtualenv-and-supervisor/](http://ewong.me/creating-and-deploying-flask-app-using-uwsgi-nginx-virtualenv-and-supervisor/)
+[http://flaviusim.com/blog/Deploying-Flask-with-nginx-uWSGI-and-Supervisor/](http://flaviusim.com/blog/Deploying-Flask-with-nginx-uWSGI-and-Supervisor/)
