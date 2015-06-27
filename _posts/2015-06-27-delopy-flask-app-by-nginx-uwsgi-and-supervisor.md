@@ -39,11 +39,12 @@ deactivate
 
 #### uWSGI
 **安装**
+
 在虚拟环境下，执行 `pip install uwsgi`
 
 **使用**
 {% highlight sh linenos %}
-`/path/to/virtual/env/bin/uwsgi -s /tmp/uwsgi.sock -w flask_file_name:app -H /path/to/virtual/env --chmod-socket 666`
+/path/to/virtual/env/bin/uwsgi -s /tmp/uwsgi.sock -w flask_file_name:app -H /path/to/virtual/env --chmod-socket 666
 {% endhighlight %}
 
 uwsgi执行后，生成的sock文件，可能会因为权限问题，无法被nginx正确读取访问，通过`--chmod-socket 666`，修正此问题
@@ -87,6 +88,7 @@ ln /path/to/virtual/env/config/nginx.conf /etc/nginx/sites-enabled/app_name.conf
 
 
 **使用**
+
 `vim env_name/config/supervisor.conf`
 
 粘贴如下内容，对应你的项目修改文件
