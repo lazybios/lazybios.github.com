@@ -19,30 +19,35 @@ Ruby-China源码追踪: 小贴士功能分析
 正好是topic的列表页和内容页，我们再回到`app/views/topics/_sidebar_box_tips.html.erb`文件中看看数据是如何存储和传递的。
 
 
-``` ruby
+{% highlight objc linenos %}
+
 <div class="panel panel-default">
   <div class="panel-heading">小帖士</div>
   <div class="panel-body">
     <%= random_tips %>
   </div>
 </div>
-```
+
+{% endhighlight %}
 
 发现此处并没有我们要的结果，而是调用了一个叫`random_tips`方法，这个方法明显不是系统方法，所以可以断定是helper方法
 ，再来继续追踪`random_tips`,发现确实是在`app/helpers/application_helper.rb`中定义的。
 
 
-```ruby
+{% highlight objc linenos %}
+
 def random_tips
   tips = SiteConfig.tips
   return EMPTY_STRING if tips.blank?
   tips.split("\n").sample
-```
+
+{% endhighlight %}
 
 数据存储在Mongo中的SiteConfig文档从,`SiteConfig.tips`取出数据、判空、返回显示到页面中，这里还有个地方需要指出就是在对于移动端和PC端的显示方法。小贴士的显示逻辑是通过`mobile?`方法判断是否用户客户端类型，过滤显示,view代码如下:
 
 
-```ruby
+{% highlight objc linenos %}
+
 <% if !mobile? %>
   <div class="sidebar col-md-3">
     <%= render "sidebar_box_tips" %>
@@ -50,11 +55,12 @@ def random_tips
   </div>
 <% end %>
 
-```
+{% endhighlight %}
 
 通过`ack 'mobile\?'`查找方法定义，发现也定义在`app/helpers/application_helper.rb`中。
 
-```ruby
+{% highlight objc linenos %}
+
 MOBILE_USER_AGENTS =  'palm|blackberry|nokia|phone|midp|mobi|symbian|chtml|ericsson|minimo|' +
                       'audiovox|motorola|samsung|telit|upg1|windows ce|ucweb|astel|plucker|' +
                       'x320|x240|j2me|sgh|portable|sprint|docomo|kddi|softbank|android|mmp|' +
@@ -65,7 +71,8 @@ def mobile?
   return false if agent_str =~ /ipad/
   agent_str =~ Regexp.new(MOBILE_USER_AGENTS)
 end
-```
+
+{% endhighlight %}
 
 原理也简单，使用正则判断reques头部中user_agent类型是否在`MOBILE_USER_AGENTS`里，另外指出的是这里将ipad也按照PC端的方式处理了，想必是因为ipad这类设备的尺寸已经可以当类PC显示了。`MOBILE_USER_AGENTS`列表好全,这个方法可以单独提取出来放到工具箱里，在后面的项目中使用.
 
