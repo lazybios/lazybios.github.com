@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "read-the-ruby-china-source-code-day-0"
+title: "Ruby-China源码追踪: 小贴士功能分析"
 date: "2015-08-11 17:44"
 ---
 
