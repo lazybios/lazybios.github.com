@@ -19,7 +19,7 @@ Ruby-China源码追踪: 小贴士功能分析
 正好是topic的列表页和内容页，我们再回到`app/views/topics/_sidebar_box_tips.html.erb`文件中看看数据是如何存储和传递的。
 
 
-{% highlight objc linenos %}
+{% highlight ruby linenos %}
 
 <div class="panel panel-default">
   <div class="panel-heading">小帖士</div>
@@ -34,7 +34,7 @@ Ruby-China源码追踪: 小贴士功能分析
 ，再来继续追踪`random_tips`,发现确实是在`app/helpers/application_helper.rb`中定义的。
 
 
-{% highlight objc linenos %}
+{% highlight ruby linenos %}
 
 def random_tips
   tips = SiteConfig.tips
@@ -46,7 +46,7 @@ def random_tips
 数据存储在Mongo中的SiteConfig文档从,`SiteConfig.tips`取出数据、判空、返回显示到页面中，这里还有个地方需要指出就是在对于移动端和PC端的显示方法。小贴士的显示逻辑是通过`mobile?`方法判断是否用户客户端类型，过滤显示,view代码如下:
 
 
-{% highlight objc linenos %}
+{% highlight ruby linenos %}
 
 <% if !mobile? %>
   <div class="sidebar col-md-3">
@@ -59,7 +59,7 @@ def random_tips
 
 通过`ack 'mobile\?'`查找方法定义，发现也定义在`app/helpers/application_helper.rb`中。
 
-{% highlight objc linenos %}
+{% highlight ruby linenos %}
 
 MOBILE_USER_AGENTS =  'palm|blackberry|nokia|phone|midp|mobi|symbian|chtml|ericsson|minimo|' +
                       'audiovox|motorola|samsung|telit|upg1|windows ce|ucweb|astel|plucker|' +
