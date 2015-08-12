@@ -19,7 +19,7 @@ Ruby-China源码追踪: 小贴士功能分析
 正好是topic的列表页和内容页，我们再回到`app/views/topics/_sidebar_box_tips.html.erb`文件中看看数据是如何存储和传递的。
 
 
-{% highlight ruby linenos %}
+{% highlight html linenos %}
 
 <div class="panel panel-default">
   <div class="panel-heading">小帖士</div>
