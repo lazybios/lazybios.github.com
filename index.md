@@ -1,5 +1,5 @@
 ---
-title: FreshStu
+title: Lazybios
 layout: page
 ---
 
