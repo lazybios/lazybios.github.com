@@ -1,8 +1,10 @@
 ---
 layout: post
-title: "Ruby:《Ruby 元编程》读书笔记(十四)"
+title: "《Ruby 元编程》读书笔记(十四)"
 date: "2015-08-31 21:43"
 ---
+
+![Ruby元编程]({{site.IMG_PATH}}/metaprogramming-1.jpg)
 
 前面已经对元编程的理论知识走了一遍，后面的内容侧重于实际操作和源码阅读，今天的Topic就是由书中第六章中的例子而来。
 
