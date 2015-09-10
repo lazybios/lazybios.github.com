@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Vim中的自动补全"
+title: "VIM: 括号自动补全"
 date: "2015-09-10 22:48"
 ---
 
