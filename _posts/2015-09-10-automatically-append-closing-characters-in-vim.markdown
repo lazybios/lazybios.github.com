@@ -78,7 +78,7 @@ inoremap <F9> <ESC>la
 {% endhighlight %}
 
 
-####方案二
+###方案二
 这个方案是直接用`Snipmate`这样的插件,定义括号补全的代码片段，通过`tab`键操作
 {% highlight vim linenos %}
 snippet [
