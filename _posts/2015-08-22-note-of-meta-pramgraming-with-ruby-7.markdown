@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "《Ruby 元编程》读书笔记 (七)"
+title: "《Ruby 元编程》读书笔记(七)"
 date: "2015-08-22 11:17"
 ---
 
