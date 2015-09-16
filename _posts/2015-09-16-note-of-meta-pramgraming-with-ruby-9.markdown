@@ -39,7 +39,7 @@ class MyClass
         def yet_another_class_method; end
     end
 end
-{% endhighlight %
+{% endhighlight %}
 
 其中第三种方法道出了，类方法的实质，特别记忆一下！
 
