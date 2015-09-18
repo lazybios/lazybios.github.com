@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "《Ruby 元编程》读书笔记(十)"
-date: "2015-08-24 12:31"
+date: "2015-08-25 12:31"
 ---
 
 ![Ruby元编程]({{site.IMG_PATH}}/metaprogramming-1.jpg)
