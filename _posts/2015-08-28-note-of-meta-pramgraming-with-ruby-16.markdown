@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "note-of-meta-pramgraming-with-ruby-16"
+title: "《Ruby 元编程》读书笔记 (十六)"
 date: "2015-08-28 20:25"
 ---
 
