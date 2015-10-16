@@ -18,7 +18,7 @@ gem 'grape-swagger-rails'
 
 + API存放路径结构
 
-{% highlight ruby linenos %}
+{% highlight %}
 app
 ├── api
 │   ├── dispatch.rb
