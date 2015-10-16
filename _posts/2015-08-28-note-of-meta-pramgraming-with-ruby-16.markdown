@@ -4,6 +4,8 @@ title: "《Ruby 元编程》读书笔记 (十六)"
 date: "2015-08-28 20:25"
 ---
 
+![Ruby元编程]({{site.IMG_PATH}}/metaprogramming-1.jpg)
+
 ### Self Yield
 
 给一个方法传入代码块时，可以通过yield占位对块进行回调。除了直接调用块外，还可以通过yeild给代码块传递参数，这个self yield的惯用法，其实就是通过yield self，把自身(当前对象)传递给代码块。
