@@ -18,12 +18,14 @@ gem 'grape-swagger-rails'
 
 + API存放路径结构
 
-{% highlight %}
+{% highlight sh linenos %}
+
 app
 ├── api
 │   ├── dispatch.rb
 │   └── v1
 │       └── test_api.rb
+
 {% endhighlight %}
 
 + 创建`config/initializers/grape_swagger_rails.rb`，添加如下内容
