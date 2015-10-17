@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Rails: 查询中使用Scope"
+title: "Rails: 使用Scope进行查询"
 date: "2015-10-17 23:27"
 ---
 
@@ -49,7 +49,7 @@ Post.created_before(Time.zone.now)
 当有的查询条件需要动态参数的时候，可以采用上面的方法，不过Rails Guides 中推荐如果需要动态参数的时候，不如直接使用类方法，因为有了参数的参与，scope的行为与方法更加接近了，索性不如直接使用方法来定义。
 
 
-### 合并Scope
+#### 合并Scope
 {% highlight ruby linenos %}
 class User < ActiveRecord::Base
   scope :active, -> { where state: 'active' }
