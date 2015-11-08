@@ -76,7 +76,7 @@ a:hover {
         .container .content .article-list li a:hover {
           text-decoration: underline; }
 
-  #disqus_thread {
+  .comments {
       margin-left: 38px;
       margin-right: 38px;
   }

@@ -6,6 +6,8 @@ layout: default
 	    {{ content }}
 	</div>
 </div>
-{% if page.comments %}
+<div class="comments">
+    {% if page.comments %}
     {% include comment.html %}
-{% endif %}
+    {% endif %}
+</div>
