@@ -1,7 +1,7 @@
 ---
 title: Books
 layout: page
-comments: yes
+comments: true
 ---
 
 ##在读

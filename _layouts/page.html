@@ -1,11 +1,11 @@
 ---
 layout: default
 ---
-
-<section class="post">
-{{ content }}
-</section>
+<div class="content markdown">
+	<div class="about">
+	    {{ content }}
+	</div>
+</div>
 {% if page.comments %}
-{% include comments.md %}
+    {% include comment.html %}
 {% endif %}
-

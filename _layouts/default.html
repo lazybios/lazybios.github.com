@@ -1,34 +1,26 @@
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en-us">
-  <head>
-    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
-    <meta name="author" content="{{ site.author }}" />
-    <title>{{ page.title }}</title>
-    <link rel="shortcut icon" href="/favicon.ico">
-    <link href="{{ site.url }}/feed/" rel="alternate" title="{{ site.author }}" type="application/atom+xml" />
-    <link rel="stylesheet" href="/media/css/style.css">
-    <link rel="stylesheet" href="/media/css/highlight.css">
-    <script type="text/javascript" src="/media/js/jquery-1.7.1.min.js"></script>
-  </head>
+<html>
+  {% include head.html %}
   <body>
-    <div id="container">
-      <div id="main" role="main">
-        <header>
-        <h1>{{ page.title }}</h1>
-        </header>
-        <nav>
-        <span><a title="home page" class="" href="{{ site.url }}/">home</a></span>
-        <span><a title="about" class="" href="{{ site.url }}/about/">about</a></span>
-        <span><a title="projects" class="" href="{{ site.url }}/projects/">projects</a></span>
-        <span><a title="categories" class="" href="{{ site.url }}/categories/">categories</a></span>
-        <span><a title="tags" class="" href="{{ site.url }}/tags/">tags</a></span>
-        <span><a title="books" class="" href="{{ site.url }}/books/">books</a></span>
-        <span><a title="links" class="" href="{{ site.url }}/links/">links</a></span>
-        </nav>
-        <article class="content">
-        {{ content }}
-        </article>
-      </div>
+    <div class="container">
+    {% include header.html %}
+    {{ content }}
+    <div class="pc_qrcode_outer" style="display: none;">
+              <div class="pc_qrcode_pc_inner">
+                  <div class="qr_code_pc">
+                    <img src="/assets/img/qrcode.jpg" alt="">
+                    <p>微信扫一扫<br>关注我的公众号</p>
+                  </div>
+              </div>
+          </div>
+          <div class="back_top_outer">
+              <div class="back_top_inner">
+                  <div id="back-top">
+                      <a href="#top"><span></span></a>
+                  </div>
+              </div>
+          </div>
     </div>
+    {% include footer.html %}
   </body>
 </html>
