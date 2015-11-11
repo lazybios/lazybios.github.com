@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /* font seting*/
 @font-face {
   font-family: 'iconfont';
@@ -5,7 +6,6 @@
   /* IE9*/
   src: url("iconfont.eot?#iefix") format("embedded-opentype"), url("iconfont.woff") format("woff"), url("iconfont.ttf") format("truetype"), url("iconfont.svg#iconfont") format("svg");
   /* iOS 4.1- */ }
-
 .iconfont {
   font-family: "iconfont" !important;
   font-size: 16px;
@@ -17,7 +17,7 @@
 /*common css*/
 body {
   background-color: #fafafa;
-  font-family: Georgia,'Helvetica Neue', 'Hiragino Sans GB', Helvetica, Arial, Sans-serif; }
+  font-family: "Lantinghei SC", "Open Sans", Arial, "Hiragino Sans GB", "Microsoft YaHei", "微软雅黑", "STHeiti", "WenQuanYi Micro Hei", SimSun, sans-serif; }
 
 a {
   text-decoration: none;
@@ -76,13 +76,14 @@ a:hover {
         .container .content .article-list li a:hover {
           text-decoration: underline; }
 
-  .comments {
-      margin-left: 38px;
-      margin-right: 38px;
-  }
+.comments {
+  margin-left: 38px;
+  margin-right: 38px; }
 
 .markdown {
-  font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.8;
+  word-break: break-all;
   line-height: 2em;
   color: rgba(0, 0, 0, 0.8);
   word-wrap: break-word;
@@ -278,7 +279,6 @@ footer {
     padding-left: 25px; }
     .book ul li {
       padding-left: 8%; } }
-
 @media screen and (min-width: 600px) {
   .content small {
     float: right;
@@ -286,7 +286,6 @@ footer {
     font-size: 16px; }
   .content .title h1 {
     font-size: 2em; } }
-
 @media screen and (min-width: 1320px) {
   .container .pc_qrcode_outer {
     display: block !important;
@@ -358,4 +357,4 @@ footer {
           -moz-transition: 1s;
           transition: 1s; } }
 
-
+/*# sourceMappingURL=main2.css.map */
