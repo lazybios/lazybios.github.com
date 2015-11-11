@@ -302,7 +302,7 @@ footer {
     margin-right: auto; }
   .container .qr_code_pc {
     position: absolute;
-    right: -150px;
+    right: -160px;
     top: 0;
     padding: 16px;
     border: 1px solid rgba(0, 0, 0, 0.07);
