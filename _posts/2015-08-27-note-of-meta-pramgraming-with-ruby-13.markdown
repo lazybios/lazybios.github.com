@@ -41,6 +41,7 @@ String was inherited by MyString
 + BasicObject#singleton_method_added
 + BasicObject#singleton_method_removed
 + BasicObject#singleton_method_undefined
+
 ##### 示例代码
 {% highlight ruby linenos %}
 module M1
