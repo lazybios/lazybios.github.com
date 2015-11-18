@@ -4,3 +4,4 @@ _site
 *.notes
 _site/*
 _post/*
+.DS_Store
