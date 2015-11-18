@@ -6,7 +6,7 @@ date: "2015-11-18 21:42"
 
 reduce与inject二者是等价的，reduce是inject的一个别名，从可读性上来看reduce更易阅读。 不过这也是相对的，要看你是从什么语言切过来的。先来看看关于reduce\inject的定义:
 
-```
+```ruby
 reduce(initial, sym) → obj
 reduce(sym) → obj
 reduce(initial) { |memo, obj| block } → obj
@@ -15,7 +15,7 @@ reduce { |memo, obj| block } → obj
 
 再看些示例代码:
 
-```
+```ruby
 (1..8).reduce(:+)
 => 36
 
@@ -34,7 +34,7 @@ reduce { |memo, obj| block } → obj
 #### reduce内部机制演示
 下面图示以上面给出的第二行代码为例，通过折叠分别表示`(1..8)`这几个元素，折叠过程表示加和，每次加和的结果写到折叠的背面。以此类推直到不能折叠，也即遍历完集合中的元素。
 
-```
+```ruby
 (1..8).reduce { |sum, num| sum += num }
 ```
 
