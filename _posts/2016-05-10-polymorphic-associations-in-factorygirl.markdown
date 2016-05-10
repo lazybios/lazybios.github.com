@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "使用Factory Girl表示多态关联 | Rails"
-date: "2016-05-09"
+date: "2016-05-10"
 ---
 
 使用Factory Girl表示多态关联 | Rails
@@ -9,7 +9,7 @@ date: "2016-05-09"
 除了多对多的关联关系外，Web开发中也有大量的多态关联，比如评论，图片这种公共资源，一篇文章可以有图片，有评论，反过来图片的留言其实也可以有嵌套的评论，以及插图。Rails中多态可以通过`polymorphic: true`轻松实现(如下代码)，但我们又要问了在测试中该如何体现这种关系呢？今天这篇延续昨天的文章，继续来看下如何在测试中用Factory Girl表示多态关联。
 
 #### 模型的多态实现
-```
+```ruby
 class Profile
   belongs_to :profileable, polymorphic: true
 end
@@ -30,7 +30,7 @@ end
 ```
 
 #### Account与Profile的Factory Gril定义
-```
+```ruby
 FactoryGirl.define do
   factory :account, class: Account do
     email                  { Faker::Internet.email }
@@ -50,7 +50,7 @@ end
 ```
 
 #### Student的Factory Girl定义
-```
+```ruby
 FactoryGirl.define do
   factory :student, class: Student do
     trait :trial          { subscription_status: 0 }
