@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "编写清洗可维护正则表达式的5个建议| Ruby"
+title: "编写清晰可维护正则的5个建议| Ruby"
 date: "2016-08-08"
 ---
 
