@@ -31,6 +31,7 @@ end
 
 ### Let
 每次执行测试用例的时候都会被重新创建
+
 ```ruby
 RSpec.describe 'Uses of `let`' do
   let(:random_number) { rand }
@@ -56,6 +57,7 @@ end
 ```
 
 ### Subject
+
 ```ruby
 RSpec.describe Array do
   it 'provides methods based on the `RSpec.describe` argument' do
@@ -86,6 +88,7 @@ end
 ```
 
 ### Hooks
+
 ```ruby
 RSpec.describe 'Hooks' do
   order = []
@@ -129,6 +132,7 @@ after(:all)
 ```
 
 ### Skipping
+
 ```ruby
 RSpec.describe 'Ways to skip tests' do
   it 'is skipped because it has no body'
@@ -151,6 +155,7 @@ end
 ```
 
 ### Pending
+
 ```ruby
 RSpec.describe 'Ways to mark failing tests as "pending"' do
   pending 'has a failing expectation' do
@@ -173,6 +178,7 @@ end
 
 ### Alternate Syntax
 `describe`与`it`的别名方法，只是为了让DSL看起来更符合语境，读起来易懂一些。
+
 + Groups: `context, example_group, describe`
 + Examples: `it, example, specify`
 
@@ -194,6 +200,7 @@ end
 
 ### Defining Methods
 在测试用例中自定义辅助方法
+
 ```ruby
 RSpec.describe 'Defining methods' do
   def my_helper_method(name)
@@ -216,6 +223,7 @@ end
 
 ### Shared Examples (Shared Tests)
 通过include的方式重用部分测试用例
+
 ```ruby
 RSpec.shared_examples 'acts like non-nil array' do
   it 'has a size' do
