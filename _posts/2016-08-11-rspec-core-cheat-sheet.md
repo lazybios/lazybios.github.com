@@ -113,10 +113,10 @@ RSpec.describe 'Hooks' do
   end
 end
 ```
-执行结果
-```ruby
-Execution order for the tests above:
 
+上面测试执行顺序
+
+```ruby
 before(:all)
 	around, pre
 		before
