@@ -4,12 +4,12 @@ title: "Ruby 2.3 中的语法新特性 | Ruby"
 date: "2016-11-03"
 ---
 
-![ruby_logo]({{site.IMG_PATH}}/ruby_logo.png)
+![ruby_logo]({{site.IMG_PATH}}/ruby_logo.jpg)
 
 
 ### Safe navigation operator
 
-`&.`安全操作符(翻译出来好怪)，之前写文章介绍过它(这里)，用起来类似Rails里的`#try`方法。
+`&.`安全操作符(翻译出来好怪)，之前写文章介绍过它([这里](http://lazybios.com/2016/05/safe-navigation-operator/))，用起来类似Rails里的`#try`方法。
 
 ```ruby
 # Ruby <= 2.2.x

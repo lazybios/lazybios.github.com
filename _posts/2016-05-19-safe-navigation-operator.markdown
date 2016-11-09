@@ -4,6 +4,8 @@ title: "Safe Navigation Operator(&.)| Ruby"
 date: "2016-05-15"
 ---
 
+![ruby_logo]({{site.IMG_PATH}}/ruby_logo.jpg)
+
 Safe Navigation Operator(&.)是Ruby2.3后引入的新特性，用来更方便的处理异常情况。Matt本人说这是借鉴自Objective-C中nil，它可以接受任何消息，但不做操作任然返回`nil`，这样做的好处是可以忽略掉因为对象为`nil`而导致的异常中断，用起来更像是Rails中的`try`方法。
 
 ### Object#try
