@@ -38,5 +38,5 @@ get '/foo',to: redirect { |params, request|
 -完-
 
 ### 参考引用
-+ [http://t.cn/RfZgIUR]()
-+ [http://t.cn/RfZd3hT]()
++ [http://t.cn/RfZgIUR](http://t.cn/RfZgIUR)
++ [http://t.cn/RfZd3hT](http://t.cn/RfZd3hT)
