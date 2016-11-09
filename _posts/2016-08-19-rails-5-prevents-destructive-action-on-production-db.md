@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "阻止Rake指令意外清空线上数据库 | Rails 5"
-date: "2015-08-18 18:16"
+date: "2016-08-19"
 ---
 
 有时候我们会在线上环境中调试问题，不过因为是调试所以难免要修修这改改那，然后就会一不留神用`RAILS_ENV=production rake db:schema:load`这样的命令把数据丢了。
