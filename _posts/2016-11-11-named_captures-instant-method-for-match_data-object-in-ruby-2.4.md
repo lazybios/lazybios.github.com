@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "MatchData#named_captures | Ruby2.4"
-date: "2016-11-10"
+date: "2016-11-11"
 ---
 
 ![ruby_logo]({{site.IMG_PATH}}/ruby_logo.jpg)
