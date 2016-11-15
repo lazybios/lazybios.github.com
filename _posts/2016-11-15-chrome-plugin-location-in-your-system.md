@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "我的Chrome插件都装到哪了？"
+title: "你的Chrome插件都装到哪了？"
 date: "2016-11-15"
 ---
 
