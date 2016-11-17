@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "“javascript:void(0)” 的含义"
+title: "javascript:void(0) 的含义"
 date: "2016-11-16"
 ---
 
