@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "在Rails中使用Elasticsearch| Rails"
+title: "在Rails中使用Elasticsearch"
 date: "2016-11-21"
 ---
 
