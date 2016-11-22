@@ -32,7 +32,7 @@ brew install android-platform-tools
 adb reboot bootloader
 ```
 
-![bootloader-before]({{site.IMG_PATH}}/bootloader-before.jpg)
+![bootloader-before]({{site.IMG_PATH}}/bootloader-before-1.jpg)
 
 进入上图画面后，在执行下面语句解锁OEM
 
