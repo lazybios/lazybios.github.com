@@ -50,10 +50,10 @@ fastboot oem unlock
 ### 刷入第三方Recovery系统TWRP
 这一步我们需要预先准备两个文件，分别是SuperSU与TWRP：
 
-+ SuperSU 权限管理工具
-+ TWRP （TeamWin Recovery Project） 辅助刷机的Recovery系统
++ [SuperSU](http://t.cn/RfSFJx7) 权限管理工具
++ [TWRP （TeamWin Recovery Project）](https://twrp.me/devices) 辅助刷机的Recovery系统
 
-建议大家都到它们各自官网上下载最新版本，不建议直接从别人的网盘拿，有些文件存在网盘里早就过时了，刷错版本了搞不好要变砖的。网址我都附在文墨了。
+建议大家都到它们各自官网上下载最新版本，不建议直接从别人的网盘拿，有些文件存在网盘里早就过时了，刷错版本了搞不好要变砖的。
 
 
 ##### Supersu下载页
@@ -89,6 +89,4 @@ fastboot flash recovery twrp-3.0.2-2-bullhead.img
 -完-
 
 ### 参考引用
-+ [SuperSu下载地址](http://t.cn/RfSFJx7)
-+ [Twrp镜像下载地址](https://twrp.me/devices)
 + [http://t.cn/RfSgGSq](http://t.cn/RfSgGSq)
