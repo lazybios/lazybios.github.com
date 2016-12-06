@@ -14,21 +14,21 @@ tags:
 ####Step1. Meta标签(查看[Demo](http://webdesignerwall.com/demo/responsive-design/index.html))
 大多数手机浏览器通过`viewport`宽度缩放html页面去适应手机屏幕。你可以使用`viewport`标签去重置这个值。下面关于viewport的代码告诉浏览器viewport宽度值设置为设备宽度并且禁用了初始缩放,将这个meta标签放置到<head>里
 
-{% highlight html linenos %}
+```html
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-{% endhighlight %}
+```
 
 IE8以及以下版本不支持media query。你可以引入[media-queries.js](http://code.google.com/p/css3-mediaqueries-js/)或[respond.js](https://github.com/scottjehl/Respond)去使它们变得可以支持media query。
 
-{% highlight html linenos %} 
+```html 
 
 <!--[if lt IE 9]>
 	<script src="http://css3-mediaqueries-js.googlecode.com/svn/trunk/css3-mediaqueries.js"></script>
 <![endif]-->
 
-{% endhighlight %}
+```
 
 
 ####Step2. HTML结构

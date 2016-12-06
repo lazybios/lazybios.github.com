@@ -22,10 +22,14 @@ tags:
 
 ######export
 自定义变量转环境变量，因为bash中执行的命令是以bash衍生子进程的方式进行，子进程会继承父进程的环境变量，不会继承父进程的自定义变量，如果想要传递自定义变量到子进程中，可以用`export var`的方式将自定义变量加入到环境变量中,用下列方式可测试该过程
-> `temp=1234`   
-> `env`   
-> `export temp`   
-> `env | grep 1234`
+
+```
+temp=1234  
+env   
+export temp
+env | grep 1234
+
+```
 
 ######$?、&&、||、$0\$1\$2...
 `$?` 保存上次执行命令结果   
@@ -41,7 +45,8 @@ tags:
 IFS,为Internal Field Separator (内部字段分隔符) 缩写，该值用于设定间隔字符，默认为空格，但当你要遍历一个目录下的文件时，碰到了文件名中有空格是一件相当头疼的事情，如果这时临时修改$IFS值，对于解决这个棘手的问题会有很大的帮助，处理完毕在恢复元值即可。
 
 就是这些了，至于语法细节，找本书参考一下就可以了，最后附上小脚本的代码:
-{% highlight bash %}
+
+```bash
 #!/bin/bash
 #Program:
 #    convert flv to mp3
@@ -59,13 +64,6 @@ do
 	ffmpeg -i $filename -acodec libmp3lame -ab 128k mp3/"${filename%.*}".mp3
 done
 IFS=$OLDIFS
-{% endhighlight %}
+```
 
 使用方法：直接放到，存放flv目录下，执行即可
-
-
-
-
-
-
-

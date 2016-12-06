@@ -34,35 +34,35 @@ curl -L url
 
 ###提交信息到服务器
 ####GET方式
-{% highlight html linenos %}
+```html
 
 <form method="GET" action="junk.cgi">   
  <input type=text name="birthyear">   
  <input type=submit name=press value="OK">   
  </form>   
 
-{% endhighlight%}
+```
 
 + curl "http://www.hotmail.com/when/junk.cgi?birthyear=1905&press=OK" 
 
 
 ####POST方式
 
-{% highlight html linenos %}
+```html
 
 <form method="POST" action="junk.cgi">   
  <input type=text name="birthyear">   
  <input type=submit name=press value="OK">   
  </form>   
 
-{% endhighlight%}
+```
 
 + curl --data "birthyear=1905&press=%20OK%20"  http://www.example.com/junk.cgi
 + curl --data-urlencode "name=I am Daniel" http://www.example.com     
 前者是没有经过编码，需要手动添加编码一些字符，后者curl会自动帮你搞定编码   
 
 ###文件上传
-{% highlight html linenos %}
+```html
 
 <form method="POST" enctype='multipart/form-data' action="upload.cgi">
 
@@ -70,7 +70,7 @@ curl -L url
  <input type=submit name=press value="OK">
 </form>
 
-{% endhighlight%}
+```
 + curl --form upload=@localfilename --form press=OK [URL]
 
 ###参考

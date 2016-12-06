@@ -17,16 +17,16 @@ tags:
 题目要求两个列表，并且这两个列表间还有依赖关系，所以从第一个用户列表下手，根据数据的结构可以写出对应要求的正则表达式，其中使用`()`捕获关键数据，存储当然是用dict了，也就是Hash Table，这样的化在查找的速度上会快一些(这很容易想到，Python就那几种数据结构，放到列表里也不容易掌握数据规律，所以不予考虑！)，同时根据列表不同，分别写了对应两个正则表达式来满足要求
 
 #####正则
-{% highlight python linenos %}
+```python
 #获取用户列表
 regex_get_id = r'^\[[A-Z]\s+\d{6}\s+(?:\d{1,2}:){2}\d{1,2}\s*]\s+(\d+)\s+\d{3}\s+GET\s+/topic/(\d+)\s+\((?:[0-9]{1,3}\.){3}[0-9]{1,3}\)\s+\d*\.\d*ms$'
 #获取路径列表
 regex_get_url = r'^\[[A-Z]\s+\d{6}\s+(?:\d{1,2}:){2}\d{1,2}\s*]\s+(\d+)\s+\d{3}\s+GET\s+(/[a-z]+/\d+)\s+\((?:[0-9]{1,3}\.){3}[0-9]{1,3}\)\s+\d*\.\d*ms$'
 
-{% endhighlight %}
+```
 
 #####程序代码
-{% highlight python linenos %}
+```python
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
 
@@ -126,14 +126,14 @@ def main(argv):
 if __name__ == "__main__":
 	main(sys.argv[1:])
 
-{% endhighlight %}
+```
 
 我按照一个文件夹里放一天的记录，共24个，30个文件夹，我只写了处理一天的部分，30天，可以根据文件夹的数量来for循环处理汇总。
 
 测试用的就是原博主写的测试生成代码，自动生成的模拟数据，不过我发现一个问题，它的那个脚本过于随机，符合结果的数据不多，如果你也打算实现一下，那么建议你在生成文件后自己手动按要求改几个符合条件的数据，看你的程序能不能找出来，否则随机生成你都不知道正确结果有几个，没法判断调试代码
 
 #####测试数据生成代码(直接帖过来的)
-{% highlight python linenos %}
+```python
 import random, sys
 
 if len(sys.argv) < 2:
@@ -207,7 +207,7 @@ for day in range(1, 31):
           log_file.write(log)
       log_file.close()
 
-{% endhighlight %}
+```
 
 #####参考引用
 [http://liushuaikobe.github.io/blog/2013/07/24/zhi-hu-bi-shi-%28er-%29-ri-zhi-chu-li/](http://liushuaikobe.github.io/blog/2013/07/24/zhi-hu-bi-shi-%28er-%29-ri-zhi-chu-li/) 

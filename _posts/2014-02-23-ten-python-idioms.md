@@ -15,7 +15,7 @@ published: true
 
 > `if __name__ == '__main__':`  
 
-{% highlight python %}
+```python
 def main():
 	printf('Doing stuff in module',__name__)
 
@@ -23,7 +23,7 @@ if __name == '__main__':
 	printf('Executed from the command line')
 	main()
 
-{% endhighlight %}
+```
 
 可同时在控制台下直接执行，也可以以模块的形式导入后引用   
 `import mymodule`    
@@ -34,7 +34,7 @@ if __name == '__main__':
 > `if x:`   
 `if not x:`
 
-{% highlight python %}
+```python
 #GOOD
 name = 'Safe'
 pets = ['Dog','Cat','Hamster']
@@ -46,7 +46,7 @@ if name and pets and owners:
 if name != '' and len(pets) > 0 and owners != {}:
 	print('We have pets')
 
-{% endhighlight %}
+```
 
 3. *尽可能的使用`in`*
 > `Contains:`   
@@ -54,7 +54,7 @@ if name != '' and len(pets) > 0 and owners != {}:
 `Iteration:`    
 `for x in intems:`     
 
-{% highlight python %}
+```python
 #GOOD
 name = 'Safe Hammad'
 if 'H' in name:
@@ -65,10 +65,10 @@ name ='Safe Hammad'
 if name.find('H') != -1:
 	print('This name has an H in it!')
 
-{% endhighlight %}
+```
 
 
-{% highlight python%}
+```python
 #GOOD
 pets = ['Dog','Cat','Hanster']
 for pet in perts:
@@ -82,7 +82,7 @@ while i < len(pets):
 	i += 1
 
 
-{% endhighlight %}
+```
 
 使用`in`可以清楚，精确的检查一个项目是否在一个序列中    
 可以在list,dicts(keys)，sets,strings使用，还可在实现的__contains__方法的类中使用
@@ -91,7 +91,7 @@ while i < len(pets):
 4. *不用临时变量交换两值*
 > `a,b = b,a`
 
-{% highlight python %}
+```python
 #GOOD
 a,b = 5,6
 print a,b #5,6
@@ -108,12 +108,12 @@ print a,b # 6,5
 
 避免仅使用一次的temp变量使得命名空间变复杂
 
-{% endhighlight %}
+```
 
 5. *使用sequence建立字串*
 > `''.join(some_strings)`
 
-{% highlight python%}
+```python
 #GOOD 
 chars = ['s','a','f','e']
 name = ''.join(chars)
@@ -126,7 +126,7 @@ for char in chars:
 	name += char
 
 print name #Safe
-{% endhighlight %}
+```
 join开销是线性时间，`+`开销是平方使用
 
 6. EAFP 胜于 LBYL
@@ -135,7 +135,7 @@ join开销是线性时间，`+`开销是平方使用
 `try:`   
 `except:`   
 
-{% highlight python%}
+```python
 #GOOD
 d = {'X':'5'}
 try:
@@ -149,7 +149,7 @@ if 'x' in d and  is instance(d['x'],str) and d['x'].isdigit():
 	value = int(d['x'])
 else:
 	value = None
-{% endhighlight %}
+```
 
 在pyhton中抛出异常没有java中那么开销大   
 Rely on duck typing rather than checking for a specific type
@@ -157,7 +157,7 @@ Rely on duck typing rather than checking for a specific type
 7. *enumerate方法*
 > `for i,item in enumerate(items):`    
 
-{% highlight python %}
+```python
 #GOOD
 names = ['Safe','George','Mildred']
 for i,name in enumerate(names):
@@ -169,7 +169,7 @@ count = 0
 for name in names:
 	print(i,name) #0 Safe,1 George etc.
 	count += 1
-{% endhighlight %}
+```
 
 Python2.3+版本都支持enumerate方法    
 Python2.6支持使用参数指定从非0位置开始计数
@@ -178,7 +178,7 @@ Python2.6支持使用参数指定从非0位置开始计数
 > `[i * 3 for i in data if i> 10]`
 
 
-{% highlight python %}
+```python
 #GOOD
 data = [7,20,3,15,11]
 result = [i * 3 for i in data if i > 10]
@@ -191,7 +191,7 @@ for i in data:
 	if i>10:
 		result.append(i * 3)
 print result #[60,45,33]
-{% endhighlight %}
+```
 
 谨慎使用列表推导式，有些情况会使情况变的更复杂，第二种用法反而更明朗清晰
 
@@ -199,7 +199,7 @@ print result #[60,45,33]
 > `d = dict(zip(keys,values))`   
 
 
-{% highlight python %}
+```python
 #GOOD
 keys = ['Safe','Bob','Thomas']
 values = ['Hammad','Builder','Engine']
@@ -214,7 +214,7 @@ for i,key in enumerate(keys):
 	d[keys] = values[i]
 print d #{'Bob':'Builder','Safe':'Hammad','Thomas':'Engine'}
 
-{% endhighlight %}
+```
 
 10. 其它
 

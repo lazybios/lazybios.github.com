@@ -12,12 +12,12 @@ tags:
 
 处理这个问题可以修改my.conf设置,如下:
 
-{% highlight sh linenos %}
+```sh
 
 [mysqld]   
 set-variable=max_connections=500
 
-{% endhighlight %}
+```
 
 当然如果出现这个问题，意味着你接下来得连接是不会成功的，所以只能是通过`kill -9`杀掉进程然后重新启动mysqld，此外还有个命令`SHOW FULL PROCESSLIST`可以查看当前连接数的详细情况，不过需要事先连接到mysqld上，所以如果你已经出现了报错，现在查看是于事无补的-.-,不过这个命令可以让你再重启后查看是哪些进程占用了所有的连接。
 

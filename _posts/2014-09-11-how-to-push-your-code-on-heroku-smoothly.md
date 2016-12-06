@@ -15,7 +15,7 @@ tags:
 
 在执行push命令的过程中，你会遇到下面的问题：
 
-{% highlight ruby linenos %}
+```ruby
  !
  !     Precompiling assets failed.
  !     Attempted to access a nonexistent database:
@@ -23,7 +23,7 @@ tags:
  !
 
  !     Push rejected, failed to compile Ruby app
-{% endhighlight %}
+```
 
 根据提示显示是预编译失败，试图访问一个不存在的数据库，其实已经说的很明白了，不过需要注意的是heroku官方表示不支持sqlite3(也不能说完全不支持，只是你要用sqlite3会造成你的数据不一致而且不能做到数据持久化，起不到数据库的效果)，所以我们就需要换一个heroku支持的，官方推荐的是postgresql，于是我们需要对代码中数据库配置的部分做一个修改，另对于穿越的同学，框架代码可以在[这里](http://www.xuetangx.com/c4x/UC_BerkeleyX/CS169_1x_1/asset/rails-intro.zip)下载到
 
@@ -31,13 +31,13 @@ tags:
 + 官方推荐在本地也要安装一套postgresql，那我们就照做一下(不装如何，你可以试一试 我也没尝试过...) 执行 `sudo apt-get install postgresql-client postgresql`
 + 修改应用主目录下的config/database.yaml对应部分为：(修改时，注意yaml的格式，不要把那空格给丢了)
 
-{% highlight yaml linenos%}
+```
 production:
   adapter: postgresql
   database: my_database_production
   pool: 5
   timeout: 5000
-{% endhighlight%}
+```
 
 + 最后为App添加postgresql模块 `heroku addons:add heroku-postgresql`
 

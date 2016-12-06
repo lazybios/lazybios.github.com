@@ -7,7 +7,7 @@ date: "2015-06-27 13:37"
 Sqlalchemy是一款很好用的Python ORM 工具, 配合flask可以快速构建出Restful api，不过美中不足就是Sqlalchemy的查询结果不能直接通过jsonify函数直接转换。一种变通的办法就是通过在
 在创建数据类的时候，就实现一个`to_json`的方法，代码如下:
 
-{% highlight python linenos%}
+```python
 
 class Article(Base):
     __tablename__ = 'article'
@@ -28,11 +28,11 @@ class Article(Base):
                 'content' : self.content
                 }
 
-{% endhighlight %}
+```
 
 `to_json`方法返回一个字典类型，在最终生成json数据的时候，可以提前调用查询结果的类方法`to_json`拼接出任意需求的数据格式,将拼接后的结果数据传入到`jsonify`中。
 
-{% highlight python linenos %}
+```python
 
 res =  db.session.query(Article).all()
 temp = []
@@ -41,4 +41,4 @@ for x in res:
 
 jsonify(objects = temp)
 
-{% endhighlight %}
+```

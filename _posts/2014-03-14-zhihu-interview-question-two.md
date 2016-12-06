@@ -23,7 +23,7 @@ tags:
 
 #####实现代码
 
-{% highlight python linenos %}
+```python
 #!/usr/bin/python
 # -*- coding:utf-8 -*-
 
@@ -54,7 +54,7 @@ def main(argv):
 
 if __name__ == '__main__':
     main(sys.argv[1:]) 
-{% endhighlight %}
+```
 
 这里的核心就是写正则规则，开始我的正则用的是`(//\s*.*)|(?s)(/\*(\s*(.*?)\s*)\*/)`,在[regex101](http://regex101.com/r/yJ0oA6)上测试一切正常，但是放到python代码中就有问题了，后来才发现原来python对于模式作用范围的控制有一点bug，到[Stackoverflow](http://stackoverflow.com/questions/22468046/regex-to-capture-the-c-langage-comment-use-python?noredirect=1#comment34176784_22468046)求助，其实可以避开单行模式不要用`.`,将单行赘述的写法改成`//[^n]+`前后就不会有模式冲突的问题了，可以对整个regex单行模式。
 

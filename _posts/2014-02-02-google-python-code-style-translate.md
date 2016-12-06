@@ -27,11 +27,11 @@ Python是google的主要脚本语言。这个风格指南是一个关于Python�
 使用`from x import y as z`避免同一个文件中导入两个相同模块名称或`y`一个冗长的模块名称
 
 例如`sound.effects.echo`可以按下列方式导入
-{% highlight python linenos %}
+```python
 from sound.effects import echo
 ...
 echo.EchoFilter(input,output,delay=0.7,atten=4)
-{% endhighlight  %}
+```
 
 不要在imports语法中使用相关名称。即使用package的全名,即使对于同一package的模块。这样可以避免无意导入一个package两次。
 

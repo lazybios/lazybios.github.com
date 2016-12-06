@@ -26,7 +26,7 @@ tags:
 
 既然要转换就要知道自己机器的实际处理器类型模式，一般可以通过宏定义，或利用共用体的存储特性去识别
 ######宏定义
-{% highlight c %}
+```c
 #include <stdio.h>
 #include <endian.h>
 
@@ -35,10 +35,10 @@ int main(void){
 									__LITTLE_ENDIAN,__BYTE_ORDER);
 	return 0;
 }
-{% endhighlight %}
+```
 
 ######共用体特性
-{% highlight c %}
+```c
 #include <stdio.h>
 #include <stdlib.h>
 
@@ -61,4 +61,4 @@ int main(void)
 	if(i==1) printf("LITTLE ENDIAN\n");
 	return 0;
 }
-{% endhighlight %}
+```

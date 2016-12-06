@@ -31,7 +31,7 @@ tags:
 ####merge合并
 某些合并后会发生冲突，这时需要手动去调整，下面冲突文件为例子    
 
-{% highlight ruby linenos %}
+```ruby
 <<<<<<< HEAD
 <div id="footer">contact : email.support@github.com</div>
 =======
@@ -39,7 +39,7 @@ tags:
   please contact us at support@github.com
 </div>
 >>>>>>> iss53
-{% endhighlight %}
+```
 
 这个冲突会新生成的文件，把冲突的两部分做了划分，`=======`作为分界线，HEAD表示当前分支，iss53表示另一个分支，手动处理选择正确的部分保留，同时删除`<<<...`和`>>>...`以及`===...`部分，之后可以再次进行add,commit，这样就算完成了本次合并      
 

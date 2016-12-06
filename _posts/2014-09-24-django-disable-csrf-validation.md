@@ -14,7 +14,7 @@ tags:
 
 果然django已经自带了这个功能，具体如下操作:
 
-{% highlight python linenos %}
+```python
 
 from django.views.decorators.csrf import csrf_exempt
 
@@ -22,4 +22,4 @@ from django.views.decorators.csrf import csrf_exempt
 def interface_view(request):
     pass
 
-{% endhighlight %}
+```

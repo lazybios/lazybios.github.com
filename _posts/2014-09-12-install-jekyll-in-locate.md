@@ -17,10 +17,10 @@ tags:
 + 安装bundler包管理器 `gem install bundler`   
 + 在你的site(github-page) 主目录下创建`Gemfile`,该文件内的具体内容如下:
 
-{% highlight sh linenos %}
+```sh
 source 'https://rubygems.org'      
 gem 'github-pages'
-{% endhighlight %}
+```
 
 + 执行`bundle install`
 

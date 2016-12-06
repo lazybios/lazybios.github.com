@@ -35,7 +35,7 @@ Ruby中不具备嵌套作用域(即在内部作用域，可以看到外部作用
 从一个作用域进入另一个作用域的时候，局部变量会立即失效，为了让局部变量持续有效，可以通过规避关键字的方式，使用方法调用来代替作用域门，让一个作用域看到另一个作用域里的变量，从而达到目的。具体做法是，通过Class.new替代class，Module#define_method代替def,Module.new代替module。这种做法称为扁平作用域，表示两个作用域挤压到一起。
 
 #####示例代码(Wrong)
-{% highlight ruby linenos %}
+```ruby
 my_var = “Success”
 class MyClass
     puts my_var  #这里无法正确打印”Success”
@@ -43,10 +43,10 @@ class MyClass
         puts my_var  #这里无法正确打印”Success”
     end
 end
-{% endhighlight %}
+```
 
 ##### 示例代码(Right)
-{% highlight ruby linenos %}
+```ruby
 my_var = “Success”
 MyClass = Class.new do
     puts “#{my_var} in  the class definition”
@@ -54,7 +54,7 @@ MyClass = Class.new do
         “#{my_var} in the method”
     end
 end
-{% endhighlight %}
+```
 
 #### 共享作用域
 
@@ -65,7 +65,7 @@ end
 这个BasicObject#instance_eval有点类似JS中的bind方法，不同的时，bind是将this传入到对象中，而instance_eval则是将代码块(上下文探针Context Probe)传入到指定的对象中，一个是传对象，一个是传执行体。通过这种方式就可以在instance_eval中的代码块里访问到调用者对象中的变量。
 
 #### 示例代码
-{% highlight ruby linenos %}
+```ruby
 class MyClass
     def initialize
         @v = 1
@@ -81,12 +81,12 @@ end
 v = 2
 obj.instance_eval { @v = v }
 obj.instance_eval { @v }   # => 2
-{% endhighlight %}
+```
 
 此外，instance_eval方法还有一个双胞胎兄弟：instance_exec方法。相比前者后者更加灵活，允许对代码块传入参数。
 
 #### 示例代码
-{% highlight ruby linenos %}
+```ruby
 class C
     def initialize
         @x = 1
@@ -101,7 +101,7 @@ class D
 end
 #D.new.twisted_method   # => “@x: 1, @y: ”
 D.new.twisted_method   # => “@x: 1, @y: 2”
-{% endhighlight %}
+```
 
 因为调用instance_eval后，将调用者作为了当前的self，所以作用域更换到了class C中，之前的作用域就不生效了。这时如果还想访问到之前@y变量，就需要通过参数打包上@y一起随instance_eval转义，但因为instance_eval不能携带参数，所以使用其同胞兄弟instance_exec方法。
 

@@ -24,11 +24,11 @@ ruby中不会对文件打开次数进行限制
 #### 格式化字符串时应该如何在`#{}`与`%{}`取舍
 大多数的情况可以用`#{}`进行格式化字符串，但是当在字符串中有多个相同的变量需要替换的时候，可以通过`%{}`的形式，减少`#{}`的重复输入
 
-{% highlight ruby nos%}
+```ruby
 formatter = "something need to repeat more then one times %{name} and %{name} "
 puts formatter %{name: 'nothing'}
 #something need to repeat more then one times nothing and nothing
-{% endhighlight %}
+```
 
 
 -完-

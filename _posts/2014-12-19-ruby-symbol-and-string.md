@@ -16,13 +16,13 @@ tags:
 + 采用symbol做hash key 可以节省内存 因为对于string来说，即使是相同的字符串但它们确实不同得对象  
 a.object_id 与 b.object_id 对比 所以当你
 
-{% highlight ruby nos %}
+```ruby
 
 h['ruby'].name = "ruby"
 h['ruby'].author = "matz"
 h['ruby'].brith = "1995"
 
-{% endhighlight %}
+```
 
 这时对于"ruby"这个字符创建的是3个份，但是如果换成了h[:ruby]则仅仅在内存中又一份
 
@@ -30,10 +30,10 @@ h['ruby'].brith = "1995"
 不用多次动态生成"ruby"字符串，同时也免去了作为key值，不能随意改变，为了维护这一点，所以要对string对象施加保护，即类似加锁，但是对于symbol来说确实不必要的
 
 + ruby 的hash的key名可以是一个可变的对象,如下面代码
-{% highlight ruby nos %}
+```ruby
 l = [1,2]
 h[l] = "somthing"
-{% endhighlight %}
+```
 
 但是当l发生变化后要调用h.rehash 再hash才能通过 h[l]再次访问到原来得值
 

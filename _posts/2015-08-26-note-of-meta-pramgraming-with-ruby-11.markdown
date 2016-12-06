@@ -15,7 +15,7 @@ date: "2015-08-26 14:26"
 Ruby中使用Module#alias_method方法和alias关键字为方法取别名。
 
 ##### 示例代码
-{% highlight ruby linenos %}
+```ruby
 class MyClass
     def my_method
          “my_method()”
@@ -26,7 +26,7 @@ end
 obj = MyClass.new
 obj.my_method    #=> “my_method()”
 obj.m   #=> “my_method()”
-{% endhighlight %}
+```
 
 需要注意的是，在顶级作用域中（main）中只能使用alias关键字来命名别名，因为在那里调用不到Module#alias_method方法
 
@@ -52,7 +52,7 @@ obj.m   #=> “my_method()”
 
 前面提到的细化，也可以作为一种方法包装器，在细化的方法中调用super方法，可以调用会细化之前的方法。此外细化相比起**环绕别名**，细化的作用范围是文件末尾，而环绕别名则是作用在全局。
 
-{% highlight ruby linenos %}  
+```ruby  
 module StringRefinement
   refine String do
     def length
@@ -64,13 +64,13 @@ end
 using StringRefinement
 
 puts "War and Peace".length  #=> “long”
-{% endhighlight %}
+```
 
 #### 下包含包装器 (Module#prepend)
 
 在介绍**祖先链**的部分有涉及过include与prepend两个方法，前者是将模块插入到当前类的上方，后者是插入到下方，而下方的位置，正好是方法查找时优先查找的位置，利用这一优势，可以覆写当前类的同名方法，同时通过super关键字还可以调用到该类中的原始方法
 
-{% highlight ruby linenos %}
+```ruby
 module ExplicitString
     def length
         super > 5 ? ‘long’ : ‘short’
@@ -82,6 +82,6 @@ String.class_eval do
 end
 
 puts "War and Peace".length  #=> “long”
-{% endhighlight %}
+```
 
 -待续-

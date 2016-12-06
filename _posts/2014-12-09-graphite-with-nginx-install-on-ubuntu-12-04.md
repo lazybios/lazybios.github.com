@@ -13,12 +13,12 @@ graphite是一块实时监控软件，其由3部分组成，存储数据的wishp
 
 #### 1. 更新软件包索引与系统
 
-{% highlight sh nos %}
+```bash
 
 sudo apt-get update
 sudo apt-get upgrade
 
-{% endhighlight %}
+```
 
 #### 2. 安装更新graphite依赖
 `sudo apt-get install python-django python-cairo python-pip python-django-tagging`
@@ -44,19 +44,19 @@ sudo apt-get upgrade
 #### 6.修改配置文件（nginx,uwsgi,graphite,）
 ##### Graphite
 `/opt/graphite/`为graphite的默认安装路径,其中`/opt/graphite/conf/`存放的graphite的配置文件
-{% highlight sh nos %}
+```bash
 
 cp storage-schemas.conf.example storage-schemas.conf
 cp storage-aggregation.conf.example storage-aggregation.conf
 cp carbon.conf.example carbon.conf
 cp graphite.wsgi.example wsgi.py
 cp /opt/graphite/webapp/graphite/{local_settings.py.example,local_settings.py}
-{% endhighlight %}
+```
 
 打开`local_settings.py`修改时区`TIME_ZONE='Asia/Shanghai'`
 
 ##### Nginx
-{% highlight sh nos %}
+```bash
 
 #/etc/nginx/sites-available/graphite
 server {
@@ -70,7 +70,7 @@ server {
     }
 }
 
-{% endhighlight %}
+```
 
 建立软连接到site-enabled启用该VirtualHost
 
@@ -78,7 +78,7 @@ server {
 
 ##### uWSGI
 
-{% highlight sh nos %}
+```bash
 
 #/etc/uwsgi/apps-available/graphite.ini
 
@@ -89,7 +89,7 @@ uid = www-data
 chdir = /opt/graphite/conf
 module = wsgi:applicationdpuf
 
-{% endhighlight %}
+```
 
 建立软连接到/etc/uwsgi/apps-enabled使该配置生效
 `ln -s /etc/uwsgi/apps-available/graphite.ini /etc/uwsgi/apps-enabled/`
@@ -110,18 +110,18 @@ module = wsgi:applicationdpuf
 至此所有全部搞定，先开carbon，再开uwsgi，最后nginx
 
 
-{% highlight sh nos %}
+```bash
 
 /opt/graphite/bin/carbon-cache.py start
 /etc/init.d/uwsgi restart
 /etc/init.d/nginx restart
 
-{% endhighlight %}
+```
 
 打开浏览器,输入`http://ip:8080`就能看到效果了，如果不能正确出图,就要排查nginx或者uwsgi的问题了，一般这里出错居多，反正我是如此
 
 排错你可能会需要这几个日志
-{% highlight sh nos %}
+```bash
 
 #Nginx日志
 /var/log/nginx/graphite.error.log
@@ -130,7 +130,7 @@ module = wsgi:applicationdpuf
 #uwsgi日志
 /var/log/uwsgi/app/graphite.log
 
-{% endhighlight %}
+```
 
 #### 注意事项
 #####ImportError: No module named defaults

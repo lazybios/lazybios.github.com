@@ -22,7 +22,7 @@ date: "2015-08-24 19:33"
 
 类方法其实质是生活在该类的单件类中的单件方法。其定义方法有三种，分别是:
 
-{% highlight ruby linenos %}
+```ruby
 # 法一
 def MyClass.a_class_method; end
 
@@ -39,7 +39,7 @@ class MyClass
         def yet_another_class_method; end
     end
 end
-{% endhighlight %}
+```
 
 其中第三种方法道出了，类方法的实质，特别记忆一下！
 

@@ -26,7 +26,7 @@ tags:
 
 创建配置步骤
 
-{% highlight sh nos %}
+```bash
 
 mkdir vagrant
 cd vagrant
@@ -34,7 +34,7 @@ vagrant init chef/centos-6.5
 \#通过[vagrantcloud](https://vagrantcloud.com/chef/boxes/centos-6.5)下载系统镜像，会自动生成Vagrantfile文件,下载镜像时间会比较长~
 vagrant up #启动vagrant，如果本地没有box，则会从远程下载
 
-{% endhighlight %}
+```
 
 
 ### Vagrant 配置

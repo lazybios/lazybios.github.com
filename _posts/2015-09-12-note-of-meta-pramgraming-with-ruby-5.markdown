@@ -19,7 +19,7 @@ date: "2015-08-21 18:33"
 通过Kernel#method方法，可以获得一个用Method对象表示的方法，在之后可以用Method#call方法对其进行调用。同样也可以用Kernel#singleton_method方法把单件方法名转换为Method对象
 
 ##### 示例代码
-{% highlight ruby linenos %}
+```ruby
 class MyClass
     def initialize(value)
         @x = value
@@ -32,14 +32,14 @@ end
 obj = MyClass.new(1)
 m = obj.method :my_method
 m.call   #=> 1
-{% endhighlight %}
+```
 
 #### 自由方法
 
 与普通方法类似，不同的是它会从最初定义它的类或模块中脱离出来(即脱离之前的作用域)，通过Method#unbind方法，可以将一个方法变为自由方法。同时，你也可以通过调用Module#instance_method获得一个自由方法.
 
 ###### 示例代码
-{% highlight ruby linenos %}
+```ruby
 module MyClass
     def my_method
         42
@@ -48,7 +48,7 @@ end
 
 unbound = MyModule.instance_method(:my_method)
 unbound.class  #=> UnboundMethod
-{% endhighlight %}
+```
 
 上面代码中的UnboundMethod对象，不能够直接用来调用，不过可以将一个UnboundMethod方法绑定到一个对象上，使其再次成为一个Method对象，然后再被调用执行。
 
@@ -56,10 +56,10 @@ unbound.class  #=> UnboundMethod
 
 此外还可以将UnboundMethod对象传递给Module#define_method方法，从而实现绑定。
 
-{% highlight ruby linenos %}
+```ruby
 String.send :define_method, :another_method, unbound
 “abc”.anther_method  #=> 42
-{% endhighlight %}
+```
 
 PS: 上面代码请与前一小节示例代码，结合起来看！
 

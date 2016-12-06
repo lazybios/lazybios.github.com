@@ -9,7 +9,7 @@ tags:
 ---
 
 本篇通过一个简单的haproxy配置文件范例进行说明Hapraxy的一些基本概念，下面是完整的配置文件  
-{% highlight sh nos %}
+```bash
 # 全局配置
 global
 log /dev/log    local0
@@ -53,23 +53,23 @@ balance roundrobin
 mode http
 server relay1 11.11.1.22:80 check
 server relay2 11.11.1.23:80 check
-{% endhighlight %}
+```
 
 ####前端(Frontend)
 暴露给用户访问的机器,即haproxy所在的机器，用户的请求通过该前端机根据相应负载均衡算法分发到对应的后端机
-{% highlight sh nos %}
+```bash
 # frontend <name> 定义系列监听套接字
 frontend dispatch
 # 定义前端的监听地址和端口
 bind *:80
 # 默认后端为 relay_group
 default_backend relay_group
-{% endhighlight %}
+```
 上面没有配置访问控制列表(ACL),一般在这里可以通过ACL访问控制设置符合特定要求的特定路径转发，详细的ACL后面会专门开一篇记一下
 
 ####后端(Backend)
 处理前端机分发过来得请求的后端server,即真正执行程序的地方，可以是若干个server服务组合
-{% highlight sh nos %}
+```bash
 # backend <name> 定义后端服务器设置
 backend relay_group
 # 负载均衡算法类型设置为 roundrobin
@@ -79,11 +79,11 @@ mode http
 # server <app_name> ip:port check 设置服务地址和端口,并设置健康检查
 server relay1 11.11.1.22:80 check
 server relay2 11.11.1.23:80 check
-{% endhighlight %}
+```
 上面设置了一个后端组relay_group，会根据前端机满足的分发要求，根据设置好的负载算法选择合适的server进行分发，其中check字段代表server健康检查，用于自动检测server健康状态，如果发现不可达会自动将其从group重删除出去，以防影响到正常服务
 
 ###Haproxy的状态信息
-{% highlight sh nos %}
+```bash
 # listen <name>：通过关联“前端”和“后端”定义了一个完整的代理
 listen stats 0.0.0.0:1936
 # mode 执行协议类型
@@ -98,7 +98,7 @@ stats realm Haproxy\ Statistics
 stats uri /admin
 # 启用带认证的统计报告功能并授权一个用户帐号，不能用于“frontend”区段
 stats auth admin:admin
-{% endhighlight %}
+```
 
 ####负载均衡算法
 Haproxy支持很多负载算法，这里罗列出常用的3种

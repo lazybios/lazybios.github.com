@@ -13,17 +13,17 @@ Kernal#eval方法与之前的BasicObject#instance_eval和Module#class_eval一样
 PS:BasicObject#instance_eval也是可以执行字符串代码的。
 
 #### 示例代码
-{% highlight ruby linenos %}
+```ruby
 array = [10, 20]
 element = 30
 eval(“array << element”)  #=> [10, 20, 30]
 array.instance_eval "self << element"  #=> [10, 20, 30]
-{% endhighlight %}
+```
 
 ### Here文档(Here documents)
 
 以<<打头，后面跟一个“结束序列标识”，之后就可以是正式的文档内容了，可以任意换行，直到遇到了独立出现的”结束序号标识”。
-{% highlight ruby linenos %}
+```ruby
 puts <<GROCERY_LIST
 Grocery list
 ------------
@@ -34,10 +34,10 @@ Grocery list
 
 * Organic
 GROCERY_LIST
-{% endhighlight %}
+```
 
 上面代码的输出格式如下:
-{% highlight ruby linenos %}
+```ruby
 Grocery list
 ------------
 1. Salad mix.
@@ -47,7 +47,7 @@ Grocery list
 
 * Organic
 => nil
-{% endhighlight %}
+```
 
 ### 绑定对象
 
@@ -56,7 +56,7 @@ Binding是一个用对象标识的完整作用域(上下文环境)。可以通�
 使用Kernel#binding方法可以用来创建Binding对象
 
 #### 示例代码
-{% highlight ruby linenos %}
+```ruby
 class MyClass
     def my_method
         @x = 1
@@ -66,14 +66,14 @@ end
 
 b = MyClass.new.my_method
 eval “@x”, b #=> 1
-{% endhighlight %}
+```
 
 上面代码，在MyClass类中定义了一个my_method方法来返回一个当前的绑定。最后将这个返回的绑定，作为参数传递给eval方法。这样“@x” 就可以在返回的绑定作用域中执行了。
 
 关于绑定还有另外一个知识点，Ruby还提供了一个名为TOPLEVEL_BINDING的预定义常量，表示顶级作用域Binding对象。该常量可以在程序的任何位置访问到。言外之意，你可以在程序的任何位置，通过Kernal#eval方法在顶级作用域中执行代码。
 
 #### 示例代码
-{% highlight ruby linenos %}
+```ruby
 class AnotherClass
     def my_method
         eval “self”, TOPLEVEL_BINDING
@@ -81,7 +81,7 @@ class AnotherClass
 end
 
 AnotherClass.new.my_method  #=> main
-{% endhighlight %}
+```
 
 #### 代码注入
 

@@ -23,7 +23,7 @@ tags:
 ####Step 2 定义Json生成接口
 按照D3里Force Layout所要求的JSON格式做定义，因为仅仅是一对多的关系，所以仍然是nodes与links结构，只是多了些附加字段用来做其它功能的扩展。比如`name,exp,summ,score1,score2`等。
 
-{% highlight javascript linenos %}
+```javascript
     {
       "nodes": [
         {
@@ -56,7 +56,7 @@ tags:
         ...
         ]
     }
-{% endhighlight %}
+```
 
 ####Step 3 D3渲染可视化效果
 这是本次毕设的核心部分，除了D3还用到了JQuery，Ajax技术，JQuery与Ajax主要做为前端交换使用，用于提交查询，异步获取Json数据。当然这里面也遇到不少问题。
@@ -73,7 +73,7 @@ tags:
 
 **解决办法:** 对svg容器添加`d3.behavior.zoom()`行为，并设置zoom事件监听器。最关键的地方是要记得，在svg后追加一个`g`容器，代码如下
 
-{% highlight javascript linenos %}
+```javascript
               var vis = d3.select("body")
                     .append("svg:svg")
                     .attr("class", "stage")
@@ -92,7 +92,7 @@ tags:
               function zoom() {
                   vis.attr("transform", "translate(" + d3.event.translate + ")scale(" + d3.event.scale + ")");
                 }
-{% endhighlight  %}
+```
 
 + 自我指向连接设置，如下图
 
@@ -100,7 +100,7 @@ tags:
 
 **解决办法：** 修改json中links的映射关系，source与target分别引用到nodes中的点，映射函数用的是`d3.map()`,因为中心点的关系在nodes中用两个，所以使用`d3.set()`建立nodes的map结构时会发生覆盖问题，导致后面建立link关系时会出现孤立的点，这时就需要在建立map时，对map中是否已经存在该键做判断，代码如下
 
-{% highlight javascript linenos %}
+```javascript
 
             function mapNodes(nodes){
               nodesMap = d3.map()       
@@ -117,7 +117,7 @@ tags:
                   l.source = nodesMap.get(l.source)
                   l.target = nodesMap.get(l.target)    
               });
-{% endhighlight %}
+```
 
 
 SVG，PATH用法可以参考mozilla的[MDN](https://developer.mozilla.org/en-US/docs/Web/SVG)

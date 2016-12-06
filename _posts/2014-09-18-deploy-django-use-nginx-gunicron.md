@@ -18,7 +18,9 @@ tags:
 
 上面几个部分的关系:
 
-`the web client <-> the web server <-> the socket <-> gunicorn <-> Django`
+```
+the web client <-> the web server <-> the socket <-> gunicorn <-> Django
+```
 
 Supervisor与Virtualenv 都是管理工具，不是应用必须得
 
@@ -29,7 +31,7 @@ Supervisor的安装方法以前，写过一篇类似的文章，[在这里](),�
 #####Gunicorn
 Gunicorn通过`pip install gunicorn`可以直接安装，安装好后可以用下面代码测试一下:
 
-{% highlight sh linenos %}
+```sh
 
 def app(environ,start_reponse):    
     data = "Hello,World!\n"    
@@ -38,7 +40,7 @@ def app(environ,start_reponse):
                   ])    
     return iter([data])    
 
-{% endhighlight %}
+```
 
 在相应文件目录下执行 `gunicorn -w 4 test:app --bind 127.0.0.1:8000` 然后到浏览器中访问`127.0.0.1:8000`看到hello，world即为成功~
 
@@ -48,7 +50,7 @@ def app(environ,start_reponse):
 
 创建一个django的虚拟环境
 
-{% highlight sh linenos %}
+```sh
 
 virtualenv dev    
 cd dev   
@@ -57,7 +59,7 @@ pip install -v django=1.4.5
 django-admin.py startproject myapp   
 cd myapp    
 
-{% endhighlight %}
+```
 
 
 ###配置
@@ -69,14 +71,14 @@ cd myapp
 
 通过上面的命令你就可以顺利的启动django服务了~ 但是这还不够，应为这个进程很可能因为一些意外原因挂掉，不够保险，这时我们使用上面介绍的Supervisor的方式启动gunicorn就稳妥多了，具体方法是,使用`echo_supervisord_conf > /etc/supervisord.conf`生成配置文件样本，然后根据做具体修改，最重要的是要配置`program`部分，代码如下
 
-{% highlight sh linenos %}
+```sh
 
 [program:gunicorn]     
 command=/opt/dev/bin/gunicorn myapp.wsgi:application --bind 127.0.0.1:8000 --pid /tmp/gunicorn.pid      
 directory=/opt/dev/code/myapp
 autostart=true
 
-{% endhighlight%}
+```
 
 
 做完以上配置后，我们需要启动supervisord程序，使用如下命令`supervisord -c /etc/supervisord.conf`，根据读入的配置文件，会自动启动gunicorn，通过查看进程`ps -aux | grep gunicorn`看我们的服务器是否已经启动，如果已经启动了，我们就可以通过ip在浏览器中看到，正常运行的页面，不过这里要注意静态文件的设置，如果你启用了admin管理后台，那么你需要把admin的css，js等静态文件移到你所设置的静态文件目录中去

@@ -22,28 +22,28 @@ rails中环境变量与系统中环境变量一样，特定环境下才能访问
 
 #### 配置
 + 通过`.bashrc`配置（`.zshrc`类似）
-{% highlight sh nos %}
+```bash
 
 export ELASTICSEARCH_URL="xxxxxx"
 export DATABASE_PASSWORD="xxxxxx"
 
-{% endhighlight %}
+```
 
 + 通过yaml文件配置
 新建yaml文件，在rails app启动的时候首先加载环境变量配置文件，从而达到覆盖追加原系统变量的目的
 **新建ymal文件**
 
-{% highlight ruby nos %}
+```ruby
 #config/local_env.yml
 
 ELASTICSEARCH_URL: "xxxxxx"
 DATABASE_PASSWORD: "xxxxxx"
 
-{% endhighlight %}
+```
 
 **rails启动前加载静态yml文件**
 
-{% highlight ruby nos %}
+```ruby
 #config/application.rb
 
 config.before_configuration do
@@ -53,7 +53,7 @@ config.before_configuration do
   end if File.exists?(env_file)
 end
 
-{% endhighlight %}
+```
 
 **修改.gitignore**
 

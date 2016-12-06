@@ -8,7 +8,7 @@ Struct
 
 Ruby中的Struct与OpenStruct可以用来构建简单的数据结构，比定义类结构要轻量，类似Hash结构，可以通过方括号的形式来存取，不同的是除了方括号的存取方式，也可以使用点操作符直接存取。
 
-{% highlight ruby linenos %}
+```ruby
 Computer = Struct.new :ram, :hard_disk
 computer = Computer.new
 computer[:ram] = "4 MB"
@@ -16,11 +16,11 @@ computer.hard_disk = "500 GB"
 
 computer[:ram]       # => "4 MB"
 computer.ram       # => "4 MB"
-{% endhighlight %}
+```
 
 此外Struct还允许定义时带入语法块(Block)
 
-{% highlight ruby linenos %}
+```ruby
 Computer = Struct.new(:ram, :hard_disk) do
   def description
     "Computer with #{ram} ram and #{hard_disk} hard disk."
@@ -36,7 +36,7 @@ computer = Struct.new(:ram, :hard_disk, :processor).new("4 MB")
 
 computer = Struct.new(:ram).new("4 MB", "500 GB", "2.5 GHz", "1024x768")
 # => ArgumentError: struct size differs
-{% endhighlight %}
+```
 
 上面的代码，可以看到在定义Struct的同时通过Block语法为其定义了相应的description方法。其行为与对象的方法一样。
 
@@ -46,7 +46,7 @@ OpenStruct
 
 OpenStruct与上面的Struct功能类似，相较Struct只是可以动态向OpenStruct里添加属性，不用预先定义,不过缺点也是有的，不能通过块语法给OpenStruct对象定义方法。
 
-{% highlight ruby linenos %}
+```ruby
 require 'ostruct'
 
 computer = OpenStruct.new ram: '4 MB', hard_disk: '500 GB'
@@ -57,7 +57,7 @@ computer[:hard_disk] # => "500 GB"
 computer.screen = "1024x768"
 computer.screen   # => "1024x768"
 computer[:screen] # => "1024x768"
-{% endhighlight %}
+```
 
 
 OpenStruct没有包含在Core中，需要使用前require当程序中。同时因为不是Core自带的，所以在性能上也与Struct有所区别，当有性能要求的时候尽可能的去选择Struct。

@@ -12,7 +12,7 @@ tags:
 
 
 
-{% highlight python linenos%}
+```python
 #view.py
  def product(request,id=34):
  	pass
@@ -21,7 +21,7 @@ tags:
 url(r'^product/$',views.product,name='product1'),    
 url(r'^product/(?P<id>\d+)$',views.product,name='product'),
 
-{% endhighlight %}
+```
 
 
 

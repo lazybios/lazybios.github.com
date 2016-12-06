@@ -19,22 +19,22 @@ tags:
 
 + c/_cffi_backend.c:2:20: fatal error: Python.h: No such file or directory    
 
-{% highlight sh %}
+```bash
 sudo apt-get install python-dev 
-{% endhighlight %}
+```
 
 
 + c/_cffi_backend.c:13:17: fatal error: ffi.h: No such file or directory
 
-{% highlight sh linenos%}
+```bash
 sudo apt-get install libffi-dev
-{% endhighlight %}
+```
 
 + \** make sure the development packages of libxml2 and libxslt are installed \**
 
-{% highlight sh linenos%}
+```bash
 sudo apt-get install libxslt1-dev 
-{% endhighlight %}
+```
 
 ps：centos debian 区别就是dev 改成devel apt改为yum
 

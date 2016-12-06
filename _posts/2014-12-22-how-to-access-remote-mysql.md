@@ -18,7 +18,7 @@ guest主机用的是Ubuntu 14.04 具体操作如下:
 
 + 修改myql的user表,把host一项从`localhost`修改为`%`
 
-{% highlight sh nos %}
+```bash
 
 mysql -uroot -p  #进入mysql
 
@@ -26,7 +26,7 @@ mysql> use mysql #进入mysql数据库
 mysql> update usre set host = '%' where user = 'root' #修改
 mysql> select host user from user; #查看修改结果
 
-{% endhighlight %}
+```
 
 + 通过执行授权命令，原理与上面一样，即添加允许访问的host机地址
 

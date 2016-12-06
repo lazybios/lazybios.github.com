@@ -12,12 +12,12 @@ tags:
 
 其实超级简单,在spider中间中根据规则设置start_urls,具体的callback函数还是parse()
 
-{% highlight python %}
+```python
 
 start_urls = ["http://xxx.com/page/%s" nu for nu in xrange(1,20)]
 
 
-{% endhighlight %}
+```
 
 此外两个方向是使用`yield`关键字代替`return`，另外一个是使用CrawlSpider代替BaseSpider，定义rule规则，这两个我也没有实践,就不多说了，有痛点得自行探索一下，另外说一个`download_delay`参数
 

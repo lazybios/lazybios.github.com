@@ -14,7 +14,7 @@ date: "2015-08-18 18:16"
 
 #### 示例代码
 
-{% highlight ruby linenos %}
+```ruby
 class MyClass
     def my_method(my_arg)
         my_arg * 2
@@ -24,7 +24,7 @@ end
 obj = MyClass.new
 obj.my_method(3)    #=> 6
 obj.send(:my_method, 3) #=> 6
-{% endhighlight %}
+```
 
 上面代码通过直接调用和使用send方法调用得到的结果是一样的，使用send的好处是，可以在编码中，动态的决定方法调用。这个技巧在元编程中被称为动态派发
 
@@ -35,7 +35,7 @@ obj.send(:my_method, 3) #=> 6
 除了方法的动态调用之外，Ruby还通过Module#define_method方法和代码块提供了动态方法定义方式
 
 #### 示例代码
-{% highlight ruby linenos %}
+```ruby
 class MyClass
     define_method :my_method do |my_arg|
         my_arg * 3
@@ -44,7 +44,7 @@ end
 
 obj = MyClass.new
 obj.my_method(2)  #=> 6
-{% endhighlight %}
+```
 
 上面代码通过define_method方法取代了关键词def，其本质上都是相同的，只是在定义方式上，define_method的方式更加灵活一些，可以通过在编码中通过推导，完成函数的定义，增加了实现的灵活性。
 
@@ -57,7 +57,7 @@ method_missing利用的机制是，当一个对象进行某个方法调用的时
 当我们需要定义很多相似的方法时候，可以通过重写method_missing方法,对相似的方法进行统一做出回应，这样一来其行为就类似与调用定义过的方法一样。
 
 #### 示例代码
-{% highlight ruby linenos %}
+```ruby
 class Roulette
   def method_missing(name, *args)
     person = name.to_s.capitalize
@@ -75,7 +75,7 @@ number_of = Roulette.new
 puts number_of.bob
 puts number_of.kitty
 
-{% endhighlight %}
+```
 
 ### 动态代理
 

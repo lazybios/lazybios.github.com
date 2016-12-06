@@ -15,20 +15,20 @@ SSH（Secure Shell Protocol），可以通过数据包加密技术将等待传�
 2. 类似ftp服务器的Sftp-server，提供更安全的文件名传输服务
 
 ####安装
-{% highlight sh lineos %}
+```bash
 
 #debian    
 sudo apt-get install openssh-server openssh-client   
 #centos    
 sudo yum install openssh-server openssh-client   
 
-{% endhighlight %}
+```
 
 
 ####使用
 启动`/etc/init.d/sshd restart` 同样参数可以为start,stop,该服务同时提供了ssh与sftp两个服务，并且都是在Port22上面
 
-{% highlight sh linenos %}
+```sh
 
 ssh -f user@ip command   
 -f #结合后面的命令起作用，不登陆远程主机直接发送一个命令过去而已   
@@ -37,7 +37,7 @@ ssh -f user@ip command
 ssh user@ip 'touch abc' #直接执行创建abc      
 #如果不写user的话，会以本地计算机的账号来尝试登陆远程
 
-{% endhighlight %}
+```
 
 ####几个重要的文件&文件夹
 + `~/.ssh` 存放ssh公私秘钥对、免秘钥认证文件(authorized_keys)、记录已识别主机公钥(known_hosts)   
@@ -70,13 +70,13 @@ ssh user@ip 'touch abc' #直接执行创建abc
 
 `scp [-pr] [-l 速率] local_file user@host:path `
 
-{% highlight sh linenos %}
+```sh
 
 -p #保留原文件的权限信息     
 -r #递归复制   
 -l #传输速率限制 单位 Kbits/s   
 
-{% endhighlight %}
+```
 #####应用   
 `scp -l 800 /root/dd_10mb_file root@127.0.0.1:/tmp`   
 限制速度为100Kbytes/s传输 /root/dd_10mb_file 文件到 /tmp   
@@ -94,7 +94,7 @@ rsync可以使用下面3种传输方式
 上面三种方式的异同，在命令上仅仅体现在冒号的个数上，很好记忆~，但第3种方式必须保证rsync服务已经启动
 
 ####命令格式
-{% highlight sh linenos %}
+```sh
 
 rsync [-avrlptgoD] [-e ssh] [user@host:/dir] [/path]     
 
@@ -115,7 +115,7 @@ rsync [-avrlptgoD] [-e ssh] [user@host:/dir] [/path]
 --delete #同步删除文件  
 --progress #传输时显示传输进度
 
-{% endhighlight %}
+```
 
 
 ####应用场景
@@ -126,12 +126,12 @@ rsync [-avrlptgoD] [-e ssh] [user@host:/dir] [/path]
 ###tricks
 觉得每次在ssh中应用，host都要写点分10进的ip地址麻烦，可以尝试 修改 hosts文件 起一个别名，如下:
 
-{% highlight sh linenos %}
+```sh
 
 vim /etc/hosts
 192.168.0.1 linode
 
-{% endhighlight %}
+```
 
 
 ####参考资料

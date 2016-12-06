@@ -10,7 +10,7 @@ date: "2015-08-06 10:37"
 
 ### 方法一
 
-{% highlight objc linenos %}
+```objc
 #import "AFNetworking.h"
 
 static NSString * const BaseURLString = @"http://www.api.com/";
@@ -38,10 +38,10 @@ peration.responseSerializer = [AFJSONResponseSerializer serializer];
 //④ 发起请求
 [operation start];
 
-{% endhighlight %}
+```
 
 ### 方法二
-{% highlight objc linenos %}
+```objc
 #import "AFNetworking.h"
 
 static NSString * const BaseURLString = @"http://www.api.com/";
@@ -64,7 +64,7 @@ AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager]
 
 }];
 
-{% endhighlight %}
+```
 
 
 上面两个方法都能完成最简单的`GET`请求操作，执行流程也类似，不同的地方是第二种方法，对于参数的管理更加灵活,便于拼凑参数

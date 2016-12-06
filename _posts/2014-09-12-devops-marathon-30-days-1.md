@@ -14,14 +14,14 @@ tcpdump是一个抓包分析命令，工作在命令行界面，使用该命令�
 ####安装
 一般默然类unix系统都是系统默认安装的，如果没有可以：
 
-{% highlight sh linenos %}
+```sh
 
 #centos
 sudo yum install tcpdump	
 #debian
 sudo apt-get install tcpdump
 
-{% endhighlight %} 
+``` 
 
 ####使用
 tcpdump属于系统命令，需要在root状态下执行，使用前请确保权限的合法性
@@ -33,7 +33,7 @@ tcpdump属于系统命令，需要在root状态下执行，使用前请确保权
 
 #####常用的参数
 
-{% highlight sh linenos %}
+```sh
 	-c #限制抓包的数量，默认无限
 	-w #将输出存储为指定文件，`tcpdump -w xxx.cap` 然后再用更强大的分析工具分析
 	-D #显示当前系统有哪些网络设备
@@ -42,7 +42,7 @@ tcpdump属于系统命令，需要在root状态下执行，使用前请确保权
 	-n #不解析域名
 	-A #以ASCII码形式显示抓包的内容
 	-X #同时以16进制+ASCII形式显示包内容，类似wireshark
-{% endhighlight %}
+```
 
 #####过滤分类
 + `tcpdump udp` 指定抓包协议类型，可以是ip,fddi(分布式光纤数据接口网络),arp,rarp,tcp,udp,icmp等等

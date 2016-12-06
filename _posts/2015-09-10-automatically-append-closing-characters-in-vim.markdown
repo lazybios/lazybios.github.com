@@ -7,7 +7,7 @@ date: "2015-09-10 22:48"
 ### 方案一
 先贴代码了,你可以将下面代码直接复制到你的`.vimrc`文件中，下次重启vim自动加载后就会生效了。
 
-{% highlight vim linenos %}
+```vim
 inoremap ( ()<LEFT>
 inoremap [ []<LEFT>
 inoremap { {}<LEFT>
@@ -56,7 +56,7 @@ inoremap ) <ESC>:call RemoveNextDoubleChar(')')<CR>a
 inoremap ] <ESC>:call RemoveNextDoubleChar(']')<CR>a
 inoremap } <ESC>:call RemoveNextDoubleChar('}')<CR>a
 inoremap > <ESC>:call RemoveNextDoubleChar('>')<CR>a
-{% endhighlight %}
+```
 
 上面代码，分别自定义了insert模式下的`{、[、（、<、”、‘`自动补全键位映射,之后定义了两个函数，分别用来处理添加自动补全后带来的两个问题:
 
@@ -73,17 +73,17 @@ inoremap > <ESC>:call RemoveNextDoubleChar('>')<CR>a
 
 在v2ex看到问怎么退出补全后的括号，解决方法直接`<ESC>la`即可。你也可以把它写到映射中，通过F1~F12这样的功能键进行一键处理，个人倾向于肌肉记忆。
 
-{% highlight vim linenos %}
+```vim
 inoremap <F9> <ESC>la
-{% endhighlight %}
+```
 
 
 ###方案二
 这个方案是直接用`Snipmate`这样的插件,定义括号补全的代码片段，通过`tab`键操作
-{% highlight vim linenos %}
+```vim
 snippet [
     [${1}]${2}
-{% endhighlight %}
+```
 上面是方括号的，其它括号类似. 这样做确实比较轻量，直接输入括号也不影响，适合有使用Snipmate的同学.
 
 

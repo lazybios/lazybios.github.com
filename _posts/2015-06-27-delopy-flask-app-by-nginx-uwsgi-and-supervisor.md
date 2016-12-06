@@ -21,7 +21,7 @@ date: "2015-06-27 13:37"
 
 **使用**
 
-{% highlight sh linenos %}
+```sh
 
 # 创建虚拟环境
 virtualenv env_name
@@ -29,7 +29,7 @@ virtualenv env_name
 cd env_name && source bin/activate
 # 关闭虚拟环境
 deactivate
-{% endhighlight %}
+```
 
 
 创建源码、日志、配置文件夹，分别用来存放flask app源码、部署日志、nginx和supervisor这些组件的配置文件
@@ -43,9 +43,9 @@ deactivate
 在虚拟环境下，执行 `pip install uwsgi`
 
 **使用**
-{% highlight sh %}
+```bash
 /path/to/virtual/env/bin/uwsgi -s /tmp/uwsgi.sock -w flask_file_name:app -H /path/to/virtual/env --chmod-socket 666
-{% endhighlight %}
+```
 
 uwsgi执行后，生成的sock文件，可能会因为权限问题，无法被nginx正确读取访问，通过`--chmod-socket 666`，修正此问题
 
@@ -60,7 +60,7 @@ uwsgi执行后，生成的sock文件，可能会因为权限问题，无法被ng
 `vim env_name/config/nginx.conf`
 
 粘贴如下内容:
-{% highlight sh linenos %}
+```sh
 server {
     listen       80;
     server_name  _;
@@ -71,13 +71,13 @@ server {
       uwsgi_pass unix:/tmp/uwsgi.sock;
     }
 }
-{% endhighlight %}
+```
 
 将nginx配置建立软链到sites-enabled文件夹下  
 
-{% highlight sh %}
+```bash
 ln /path/to/virtual/env/config/nginx.conf /etc/nginx/sites-enabled/app_name.conf
-{% endhighlight %}
+```
 
 上面几个步骤做好以后，其实就能正常访问了，但是如果需要改动的话，还需要频繁的kill进程，重启进程。通过下面得supervisor来管理uwsgi进程的话，可以很好地解决频繁进程重启和守护的问题。
 
@@ -93,7 +93,7 @@ ln /path/to/virtual/env/config/nginx.conf /etc/nginx/sites-enabled/app_name.conf
 
 粘贴如下内容，对应你的项目修改文件
 
-{% highlight sh linenos %}
+```sh
 [program:your app]
 command=/path/to/virtual/env/bin/uwsgi -s /tmp/uwsgi.sock -w flask_file_name:app -H /path/to/virtual/env --chmod-socket 666
 directory=/path/to/app
@@ -102,12 +102,12 @@ autorestart=true
 stdout_logfile=/path/to/app/logs/uwsgi.log
 redirect_stderr=true
 stopsignal=QUIT
-{% endhighlight %}
+```
 
 添加完配置以后，通过软链放到supervisor配置文件夹下
-{% highlight sh %}
+```bash
 ln /path/to/virtual/env/config/supervisor.conf /etc/supervisor/conf.d/app_name.conf
-{% endhighlight %}
+```
 
 启动 `sudo  supervisord`
 

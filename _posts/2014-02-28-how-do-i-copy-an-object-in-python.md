@@ -12,11 +12,11 @@ tags:
 
 对于一般案例可以用`copy.copy`或者`copy.deepcopy`，但并不是所有对象可以被拷贝。
 
-{% highlight python %}
+```python
 import copy
 newobj = copy.copy(oldobj)
 newobj = copy.deepcopy(oldobj) #递归copy
-{% endhighlight %}
+```
 
 一些对象有自己到copy方法,比如字典类型有`copy`方法：     
 `newobj = olddict.copy()`
@@ -26,14 +26,14 @@ new_list = L[:]
 
 也可以使用`list,tuple,dict,set`函数拷贝对应类型对象，或相互之间进行类型间的转换
 
-{% highlight python %}
+```python
 #copy
 new_list = list(L) 
 new_dict = dict(olddict)
 #covert
 new_set = set(L) #list to set
 new_tuple = tuple(L) #list to tuple
-{% endhighlight %}
+```
 
 [原文链接](http://effbot.org/pyfaq/how-do-i-copy-an-object-in-python.htm)
 

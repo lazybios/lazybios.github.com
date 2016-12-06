@@ -9,12 +9,12 @@ date: "2015-08-21 19:45"
 ### 类的返回值
 
 像方法一样，类定义也会返回最后一条语句的值:
-{% highlight ruby linenos %}
+```ruby
 result = class MyClass
     self
 end
 result #=> MyClass
-{% endhighlight %}
+```
 
 ### 当前类
 
@@ -26,7 +26,7 @@ Ruby中并没有类似当前对象self一样的明确引用，不过在追踪当
 + 在一个方法中，当前类就是当前对象的类。(在一个方法中用def关键字定义另一个方法，新定义的方法会定义在self所属的类中。因为Ruby解释器总是追踪当前类(或模块)的引用，所以使用def定义的方法都成为当前类的实例方法了)
 
 #### 示例代码
-{% highlight ruby linenos %}
+```ruby
 class C
     def m1
         def m2; end
@@ -39,7 +39,7 @@ obj = D.new
 obj.m1
 
 C.instance_methods(false)   #=> [:m1, :m2]
-{% endhighlight %}
+```
 
 + 当用class关键字打开一个类时(或module关键字打开模块)，那个类称为当前类。
 

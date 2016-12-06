@@ -8,24 +8,24 @@ date: "2015-08-01 10:37"
 
 #### AppDelegate.h文件中引入MediaPlayer头文件
 
-{% highlight objc linenos %}
+```objc
 #import <MediaPlayer/MediaPlayer.h>
-{% endhighlight %}
+```
 
 #### 声明记录当前应用状态变量
 
-{% highlight objc linenos %}
+```objc
 @implementation AppDelegate
 {
         BOOL _isFullScreen;
 }
 ...
 @end
-{% endhighlight %}
+```
 
 #### 注册进入全屏和退出全屏消息事件
 
-{% highlight objc linenos %}
+```objc
 [[NSNotificationCenter defaultCenter] addObserver:self
                                              selector:@selector(willEnterFullScreen:)
                                                  name:MPMoviePlayerWillEnterFullscreenNotification
@@ -34,12 +34,12 @@ date: "2015-08-01 10:37"
                                              selector:@selector(willExitFullScreen:)
                                                  name:MPMoviePlayerWillExitFullscreenNotification
                                                object:nil];
-{% endhighlight %}
+```
 
 
 ####  实现上面消息对应的事件响应函数
 
-{% highlight objc linenos %}
+```objc
 - (void)willEnterFullScreen:(NSNotification *)notification
 {
     _isFullScreen = YES;
@@ -49,11 +49,11 @@ date: "2015-08-01 10:37"
 {
     _isFullScreen = NO;
 }
-{% endhighlight %}
+```
 
 #### 实现`application:supportedInterfaceOrientationsForWindow:`方法
 
-{% highlight objc linenos %}
+```objc
 - (NSUInteger)application:(UIApplication *)application supportedInterfaceOrientationsForWindow:(UIWindow *)window
 {
     if (_isFullScreen) {
@@ -62,7 +62,7 @@ date: "2015-08-01 10:37"
         return UIInterfaceOrientationMaskPortrait;
     }
 }
-{% endhighlight %}
+```
 
 按照顺序完成上面几个步骤就可以实现播放器进出全屏后的屏幕方向旋转了。
 

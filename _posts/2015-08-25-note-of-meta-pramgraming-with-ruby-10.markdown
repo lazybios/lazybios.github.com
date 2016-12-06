@@ -14,7 +14,7 @@ date: "2015-08-25 12:31"
 
 类扩展通过向类的单件类中添加模块来定义类方法。
 
-{% highlight ruby linenos %}
+```ruby
 module MyModule
     def my_method; ‘hello’; end
 end
@@ -26,7 +26,7 @@ class MyClass
 end
 
 MyClass.my_method
-{% endhighlight %}
+```
 
 上面代码展示了具体**类扩展**的实现方式，将一个MyModule模块引入到MyClass类的单件类中，因为my_method方法是MyClass的单件类的一个实例方法，这样，my_method方法也是MyClass的一个类方法。
 
@@ -34,7 +34,7 @@ MyClass.my_method
 
 **类方法**是**单件方法**的特例，因此可以把类扩展这种技巧应用到**任意对象**上，这种技巧即为**对象扩展**
 
-{% highlight ruby linenos %}
+```ruby
 # 法一: 打开单件类来扩展
 module MyModule
     def my_method; ‘hello’; end
@@ -62,7 +62,7 @@ class MyClass
 end
 
 MyClass.my_method  # => “hello”
-{% endhighlight %}
+```
 
 Object#extend是在接受者的单件类中包含模块的快键方式。
 

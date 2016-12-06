@@ -12,12 +12,12 @@ tags:
 
 用下面的方法可以很好的定义多行字符串
 
-{% highlight python linenos %}
+```python
 
 sql = ("this is a mutiple "
 		"line,you can try print")    
 print sql
 
-{% endhighlight %}
+```
 
 结果自然是显示为单行，且不会有任何多余的字符
