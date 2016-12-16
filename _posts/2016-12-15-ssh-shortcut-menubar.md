@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "快捷登录SSH的Menubar小工具"
-date: "2016-12-16☄"
+date: "2016-12-15"
 ---
 
 不知道大家有没有使用menubar习惯，在Github上发现一款借助menubar快速登录远程服务器的小工具(Shuttle)。感觉很不错,拿来给大家安利一下。

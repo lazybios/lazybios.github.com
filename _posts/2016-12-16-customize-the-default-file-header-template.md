@@ -10,9 +10,9 @@ Andorid Studio会给每个新创建的文件头部自动生成简单的作者信
 
 依次打开「Preferences > Editor > File and Code Templates」找到下图位置，在右侧的模板编辑区内根据自己的需求自定义描述内容并应用即可。
 
-![andorid-studio-header]({{site.IMG_PATH}}/andorid-studio-header.png)
+![andorid-studio-header]({{site.IMG_PATH}}/andorid-studio-header2.png)
 
-需要说明的是模板里的宏语句都以`#`开头，并且支持自定义变量，你可以使用下面的语法来定义属于你自己的变量，然后再模板中引用。
+​需要说明的是模板里的宏语句都是以#开头的，并且支持自定义变量，你可以使用下面的语法来定义属于你自己的变量，然后在模板中引用。
 
 ```
 #set ($ORGANIZATION_NAME = "Foobar Ltd")
