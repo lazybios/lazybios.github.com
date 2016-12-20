@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "macOS Sierra里的视频画中画"
-date: "2016-12-20☄"
+date: "2016-12-20"
 ---
 
 其实说是Sierra的功能，倒不如说是Safari的功能，毕竟这个功能还是只有在Safari上才更有意义。先来看个效果图:
