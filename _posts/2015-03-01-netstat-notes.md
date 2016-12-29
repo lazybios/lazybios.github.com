@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Devops马拉松30天 Day.3 netstat&lsof查看端口情况
+title: netstat&lsof查看端口情况
 categories:
 - devops
 tags:
@@ -8,8 +8,6 @@ tags:
 - lsof
 - linux
 ---
-
-说得要跑30天的，结果跑了一半停下来了，其实倒也不是不继续学习，只是好多东西没有停下来好好整理，今年把这个续上，不能中断了，挂在blog里多不好看-.-
 
 ### netstat
 netstat用来查看系统当前系统网络状态信息，包括端口，连接情况等，常用方式如下：
