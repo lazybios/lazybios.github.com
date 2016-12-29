@@ -1,6 +1,6 @@
 ---
 layout: post
-title: netstat&lsof查看端口情况
+title: 使用netstat、lsof查看端口占用情况
 categories:
 - devops
 tags:
