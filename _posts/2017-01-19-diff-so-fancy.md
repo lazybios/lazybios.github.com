@@ -4,7 +4,7 @@ title: "git-diff美化工具diff-so-fancy"
 date: "2017-01-19"
 ---
 
-之前文章里推荐过一款命令行diff美化工具，今天再给安利一枚专门针对git-diff的美化命令行工具。
+之前文章里推荐过一款命令行diff美化工具，今天再给安利一枚专门针对git-diff的命令行美化工具。
 
 ### 安装
 diff-so-fancy是一个用node实现的命令行工具，所以推荐使用`npm`来安装。
@@ -37,7 +37,9 @@ git config --global alias.dsf '!f() { [ -z "$GIT_PREFIX" ] || cd "$GIT_PREFIX" '
 
 ![diff-so-fancy]({{site.IMG_PATH}}/diff-so-fancy.png)
 
-是不比起默认的样式，这种花花绿绿的感觉好多了呢？(笑) 除了上面最基本用法外，diff-so-fancy还支持颜色、显示项上的定制。有兴趣的可以自己到官方文档里翻翻看。
+是不比起默认的样式，这种花花绿绿的感觉好多了呢？(笑) 除了上面最基本用法外，diff-so-fancy还支持颜色和显示项定制。有兴趣的可以自己到官方文档里翻翻看。
+
+
 
 -完-
 
