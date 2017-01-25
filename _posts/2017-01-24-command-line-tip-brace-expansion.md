@@ -17,7 +17,6 @@ mv playground/rigonyizu/today.md playground/rigongyizu/tomorrow.md
 mv playground/rigongyizu/{today,tomorrow.md}
 ```
 
-
 是不是一目了然，公共部分被提取了出来，最大限度的减少了重复输入。其实**大括号扩展**除了可以结合`mv`外，还可以配合诸如`cp、rm、touch`使用，甚至是`vim, wget`这些指令。所以当你遇到上面这样有冗余输入时，不妨试一试。
 
 ```
@@ -43,7 +42,6 @@ touch file{1..3}.md
 
 ### 注意
 + `{}`里的`,`后面没有空格
-
 
 
 -完-
