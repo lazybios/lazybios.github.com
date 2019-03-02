@@ -13,11 +13,11 @@ Tornado Web的自带模板系统，在输出模板变量时默认是自动开启
 
 方法一是在变量输出前先输入第一行，表明该变量无需转义，适合于有只读部分和用户读写部分的页面
 
-`{% raw variable %} `     
-`{{ variable }}`
+`raw variable`     
+`variable`
 
 方法二 在模板第一行输入下面第一行，之后该页面就关闭了所有的转义功能，想要转义可以在局部使用第三行的语句
 
-`{% autoescape None %}`   
-`{{ title }}`   
-`{{ escape(title) }}`
+`autoescape None`   
+`title`   
+`escape(title)`
